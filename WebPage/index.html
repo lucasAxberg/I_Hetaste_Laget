@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="menubutton"></div>
+		</div>
+
+		<div class="container">
+			<div class="display-container">
+				<div class="display"></div>
+				<div class="temp-button-container">
+					<div class="temp-button">
+						<h1 id="C" class="active" onclick="changeActive(this)">C</h1>
+						<h1 id="F" onclick="changeActive(this)">F</h1>
+					</div>
+				</div>
+			</div>
+
+			<div class="graph-container">
+				<div class="graph">
+					<div class="horizontal-graph">
+						<div class="actualGraph"></div>
+						<div class="amplitude"></div>
+					</div>
+					<div class="time"></div>
+				</div>
+
+				<div class="time-button-container">
+					<div class="time-button">
+						<h1 class="active" onclick="changeActive(this)">Test1</h1>
+						<h1 onclick="changeActive(this)">Test2</h1>
+						<h1 onclick="changeActive(this)">Test3</h1>
+						<h1 onclick="changeActive(this)">Test4</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
