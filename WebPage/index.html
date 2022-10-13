@@ -17,8 +17,10 @@
 				<div class="display"></div>
 				<div class="temp-button-container">
 					<div class="temp-button">
-						<h1 id="C" class="active" onclick="changeActive(this)">C</h1>
-						<h1 id="F" onclick="changeActive(this)">F</h1>
+						<div id="C" class="buttons active" onclick="changeActive(this)">
+							C
+						</div>
+						<div id="F" class="buttons" onclick="changeActive(this)">F</div>
 					</div>
 				</div>
 			</div>
@@ -34,10 +36,10 @@
 
 				<div class="time-button-container">
 					<div class="time-button">
-						<h1 class="active" onclick="changeActive(this)">Test1</h1>
-						<h1 onclick="changeActive(this)">Test2</h1>
-						<h1 onclick="changeActive(this)">Test3</h1>
-						<h1 onclick="changeActive(this)">Test4</h1>
+						<div class="buttons active" onclick="changeActive(this)">Live</div>
+						<div class="buttons" onclick="changeActive(this)">1 hour</div>
+						<div class="buttons" onclick="changeActive(this)">1 day</div>
+						<div class="buttons" onclick="changeActive(this)">1 week</div>
 					</div>
 					<div name="tset"></div>
 				</div>
