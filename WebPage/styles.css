@@ -18,6 +18,10 @@ body {
 	background-color: rgb(35, 35, 35);
 	height: 80px;
 	width: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .container {
@@ -137,4 +141,11 @@ body {
 
 .active {
 	background-color: lightblue;
+}
+
+.menu-stripe {
+	width: 60%;
+	height: 7px;
+	background-color: white;
+	border-radius: 1000px;
 }
