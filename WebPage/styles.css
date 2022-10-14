@@ -16,12 +16,14 @@ body {
 
 .menubutton {
 	background-color: rgb(35, 35, 35);
-	height: 80px;
+	height: 46px;
 	width: 80px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
+	padding-top: 17px;
+	padding-bottom: 17px;
 }
 
 .container {
@@ -148,7 +150,7 @@ body {
 
 .menu-stripe {
 	width: 60%;
-	height: 7px;
+	height: 6px;
 	background-color: white;
 	border-radius: 1000px;
 }
