@@ -18,6 +18,10 @@ body {
 	background-color: rgb(35, 35, 35);
 	height: 80px;
 	width: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .container {
@@ -37,7 +41,21 @@ body {
 	width: 100%;
 	height: 350px;
 	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
+
+#temp {
+	font-size: 75px;
+	margin-bottom: 10px;
+}
+
+#humidity {
+	font-size: 35px;
+}
+
 .temp-button-container {
 	height: 150px;
 	/* background-color: black; */
@@ -69,6 +87,30 @@ body {
 	border-radius: 15px;
 }
 
+.horizontal-graph {
+	display: flex;
+	width: 100%;
+	height: 80%;
+	background-color: lime;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+.amplitude {
+	height: 100%;
+	width: 10%;
+	background-color: blue;
+	border-top-left-radius: 10px;
+}
+
+.time {
+	background-color: orange;
+	width: 100%;
+	height: 20%;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
 .time-button-container {
 	height: 150px;
 	/* background-color: black; */
@@ -94,11 +136,19 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	-webkit-user-select: none;
 	user-select: none;
 	font-size: 28px;
-	font: garamond;
+	font: Garamond;
 }
 
 .active {
 	background-color: lightblue;
+}
+
+.menu-stripe {
+	width: 60%;
+	height: 7px;
+	background-color: white;
+	border-radius: 1000px;
 }
