@@ -92,12 +92,15 @@ body {
 	width: 100%;
 	height: 80%;
 	background-color: lime;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
 }
 
 .amplitude {
 	height: 100%;
 	width: 10%;
 	background-color: blue;
+	border-top-left-radius: 10px;
 }
 
 .time {
