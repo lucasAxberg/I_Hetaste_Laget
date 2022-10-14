@@ -37,7 +37,21 @@ body {
 	width: 100%;
 	height: 350px;
 	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
+
+#temp {
+	font-size: 75px;
+	margin-bottom: 10px;
+}
+
+#humidity {
+	font-size: 35px;
+}
+
 .temp-button-container {
 	height: 150px;
 	/* background-color: black; */
@@ -69,6 +83,27 @@ body {
 	border-radius: 15px;
 }
 
+.horizontal-graph {
+	display: flex;
+	width: 100%;
+	height: 80%;
+	background-color: lime;
+}
+
+.amplitude {
+	height: 100%;
+	width: 10%;
+	background-color: blue;
+}
+
+.time {
+	background-color: orange;
+	width: 100%;
+	height: 20%;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
 .time-button-container {
 	height: 150px;
 	/* background-color: black; */
@@ -97,7 +132,7 @@ body {
 	-webkit-user-select: none;
 	user-select: none;
 	font-size: 28px;
-	font: garamond;
+	font: Garamond;
 }
 
 .active {
