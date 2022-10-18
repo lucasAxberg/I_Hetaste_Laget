@@ -1,0 +1,36 @@
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+.navbar {
+	display: flex;
+	background-color: #333;
+	height: 80px;
+	width: 100%;
+	position: fixed;
+	justify-content: start;
+}
+
+.menubutton {
+	background-color: rgb(35, 35, 35);
+	height: calc(100% - 34px);
+	width: 7%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 17px;
+	padding-bottom: 17px;
+}
+
+.menu-stripe {
+	width: 60%;
+	height: 6px;
+	background-color: white;
+	border-radius: 1000px;
+}
+
+.menubutton:hover {
+	background-color: darkgrey;
+}
