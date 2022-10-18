@@ -17,12 +17,38 @@ function changeActive1(obj) {
 	Convertion(obj);
 }
 
+let OriginValue = document.getElementById("temp").innerHTML;
+console.log(OriginValue);
+let StartUnit;
+
+let parent = document.getElementsByClassName("temp-button");
+let buttonChildren = parent[0].children;
+console.log(buttonChildren);
+
+for (let i = 0; i < buttonChildren.length; i++) {
+	if (buttonChildren[i].classList.contains("active")) {
+		StartUnit = buttonChildren[i].id;
+	}
+}
+
 function Convertion(obj) {
 	let temperature = document.getElementById("temp");
-	if (obj.id == "C") {
-		temperature.innerHTML = temperature.innerHTML * 1.8 + 32;
-	} else if (obj.id == "F") {
-		temperature.innerHTML = (temperature.innerHTML - 32) / 1.8;
+	if (obj.id == "F") {
+		if (obj.id == StartUnit) {
+			temperature.innerHTML = OriginValue;
+			return;
+		}
+		temperature.innerHTML =
+			Math.round((temperature.innerHTML * 1.8 + 32) * 10) / 10;
+		// Converts the temp to farenheit from celsius with 1 decimal point
+	} else if (obj.id == "C") {
+		if (obj.id == StartUnit) {
+			temperature.innerHTML = OriginValue;
+			return;
+		}
+		temperature.innerHTML =
+			Math.round(((temperature.innerHTML - 32) / 1.8) * 10) / 10;
+		// Converts the temp to celsius from farenheit with 1 decimal point
 	}
 }
 
