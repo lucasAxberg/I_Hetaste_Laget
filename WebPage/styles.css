@@ -17,7 +17,7 @@ body {
 .menubutton {
 	background-color: rgb(35, 35, 35);
 	height: calc(100% - 34px);
-	width: 5%;
+	width: 7%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -37,7 +37,7 @@ body {
 	padding-top: 150px;
 	height: 100vh;
 
-	background-image: url(../WebPage/Images/web-background.jpg);
+	background-image: url(../WebPage/Images/wallapaper2.webp);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: fixed;
@@ -48,7 +48,8 @@ body {
 	height: 60%;
 }
 .display {
-	background-color: darkgrey;
+	background-color: white;
+	opacity: 0.3;
 	width: 100%;
 	height: 70%;
 	border-radius: 15px;
@@ -79,7 +80,7 @@ body {
 	border-radius: 10px;
 	display: flex;
 	justify-content: space-around;
-	border: 5px solid #333333;
+	border: 3px solid #333333;
 }
 .temp-button div {
 	width: 50%;
@@ -115,21 +116,21 @@ body {
 	width: 5%;
 	background-color: darkgrey;
 	border-top-left-radius: 10px;
-	border-right: 5px solid black;
+	border-right: 3px solid black;
 }
 
 .actualGraph {
-	background-color: lime;
-	width: calc(95% - 5px);
+	background-color: darkgrey;
+	width: calc(95% - 3px);
 	border-top-right-radius: 10px;
 }
 
 .time {
 	background-color: darkgrey;
 	width: 95%;
-	height: calc(15% - 5px);
+	height: calc(15% - 3px);
 	border-bottom-right-radius: 10px;
-	border-top: 5px solid black;
+	border-top: 3px solid black;
 }
 
 .time-button-container {
@@ -143,7 +144,7 @@ body {
 	background-color: darkgrey;
 	border-radius: 10px;
 	display: flex;
-	border: 5px solid #333;
+	border: 3px solid #333;
 }
 .time-button div {
 	width: 25%;
