@@ -1,25 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="Main_Menu.css" />
-		<title>Document</title>
-	</head>
-	<body>
-		<div class="navbar">
-			<div class="menubutton">
-				<div class="menu-stripe"></div>
-				<div class="menu-stripe"></div>
-				<div class="menu-stripe"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Main_Menu.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="menubutton">
+        <div class="menu-stripe"></div>
+        <div class="menu-stripe"></div>
+        <div class="menu-stripe"></div>
+      </div>
+	  <div id="title">ÄNDA BÄSTA VÄDER</div>
+    </div>
+	<div id="main-container">
+		<div id="left-container">
+			<div id="how">
+				<div class="header">HUR FUNGERAR DET?</div>
+				<div class="paragraph">
+					<p></p>
+				</div>
+			</div>
+			<div id="about" onclick="goToAbout()">
+				<img src="Images/wallapaper2.webp" id="groupImage">
+				<div id="aboutText">ABOUT US</div>
 			</div>
 		</div>
 
-		<div class="Container">
-			<div class="titel-container">
-				<div class="Titel">ÄNDA BÄSTA VÄDER</div>
+			<div id="right-container">
+
+				<div id="top">
+					<div id="project">
+						<div class="header">VÅRAT PROJEKT</div>
+						<div class="paragraph">
+							<p></p>
+						</div>
+					</div>
+				</div>
+
+
+				<div id="bottom">
+					<div id="measurement-container" class="infoButton">
+						<div class="header">TEMPERATUR</div>
+						<div class="paragraph"></div>
+						<div id="button-container">
+							<div id="measurement-button"></div>
+						</div>
+					</div>
+					<div id="time-container" class="infoButton">
+						<div class="header">TIDIGARE</div>
+						<div class="paragraph"></div>
+						<div id="button-container">
+							<div id="measurement-button"></div>
+						</div>
+
+					</div>
+				</div>
+
 			</div>
 		</div>
-	</body>
+    </div>
+</div>
+  </body>
 </html>
