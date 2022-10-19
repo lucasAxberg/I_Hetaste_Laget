@@ -1,3 +1,13 @@
+@font-face {
+	font-family: "oswaldregular";
+	src: url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
+			format("woff2"),
+		url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
 	padding: 0px;
 	margin: 0px;
@@ -33,4 +43,18 @@ body {
 
 .menubutton:hover {
 	background-color: darkgrey;
+}
+
+.Container {
+	height: 100vh;
+	background-color: grey;
+}
+
+.titel-container {
+	font-size: 60px;
+	width: 100%;
+	padding-top: 100px;
+	display: flex;
+	justify-content: center;
+	font-family: oswaldregular;
 }
