@@ -26,7 +26,7 @@ body {
 .menubutton {
   background-color: rgb(35, 35, 35);
   height: calc(100% - 34px);
-  width: 4%;
+  width: 6vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
