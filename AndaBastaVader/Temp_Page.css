@@ -22,6 +22,7 @@ body {
 	width: 100%;
 	position: fixed;
 	justify-content: start;
+	z-index: 2;
 }
 
 .menubutton {
@@ -68,6 +69,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 	font-family: oswaldregular;
+	font-weight: 600;
 }
 
 #temp {
@@ -95,7 +97,8 @@ body {
 }
 .temp-button div {
 	width: 50%;
-	font-family: oswaldregular;
+	font-family: monospace;
+	font-weight: 600;
 }
 
 .graph-container {
@@ -160,7 +163,8 @@ body {
 }
 .time-button div {
 	width: 25%;
-	font-family: oswaldregular;
+	font-family: monospace; 
+	font-weight: 600;
 }
 
 .buttons {
@@ -174,7 +178,7 @@ body {
 	-webkit-user-select: none;
 	user-select: none;
 	font-size: 28px;
-	font: Garamond;
+	font: monospace;
 }
 
 .active {
