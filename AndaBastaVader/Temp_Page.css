@@ -1,3 +1,13 @@
+@font-face {
+	font-family: "oswaldregular";
+	src: url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
+			format("woff2"),
+		url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
 	margin: 0;
 	display: flex;
@@ -57,6 +67,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	font-family: oswaldregular;
 }
 
 #temp {
@@ -84,6 +95,7 @@ body {
 }
 .temp-button div {
 	width: 50%;
+	font-family: oswaldregular;
 }
 
 .graph-container {
@@ -148,6 +160,7 @@ body {
 }
 .time-button div {
 	width: 25%;
+	font-family: oswaldregular;
 }
 
 .buttons {
