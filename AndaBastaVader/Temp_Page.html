@@ -1,62 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link rel="stylesheet" href="Temp_Page.css" />
-	</head>
-	<body>
-		<div class="navbar">
-			<div class="menubutton">
-				<div class="menu-stripe"></div>
-				<div class="menu-stripe"></div>
-				<div class="menu-stripe"></div>
-			</div>
-		</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Temp_Page.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="menubutton">
+        <div class="menu-stripe"></div>
+        <div class="menu-stripe"></div>
+        <div class="menu-stripe"></div>
+      </div>
+    </div>
 
-		<div class="container">
-			<div class="display-container">
-				<div class="display">
-					<div id="temp">23</div>
-					<div id="humidity">42%</div>
-				</div>
-				<div class="temp-button-container">
-					<div class="temp-button">
-						<div id="C" class="buttons active" onclick="changeActive1(this)">
-							C
-						</div>
-						<div id="F" class="buttons" onclick="changeActive1(this)">F</div>
-					</div>
-				</div>
-			</div>
+    <div class="container">
+      <div class="display-container">
+        <div class="display">
+          <div id="temp">23</div>
+          <div id="humidity">42%</div>
+        </div>
+        <div class="temp-button-container">
+          <div class="temp-button">
+            <div
+              id="C"
+              class="buttons active"
+              onclick="TempButtonFunction(this)"
+            >
+              C
+            </div>
+            <div id="F" class="buttons" onclick="TempButtonFunction(this)">
+              F
+            </div>
+          </div>
+        </div>
+      </div>
 
-			<div class="graph-container">
-				<div class="graph">
-					<div class="horizontal-graph">
-						<div class="amplitude"></div>
-						<div class="actualGraph"></div>
-					</div>
-					<div class="time"></div>
-				</div>
+      <div class="graph-container">
+        <div class="graph">
+          <div class="horizontal-graph">
+            <div class="amplitude"></div>
+            <div class="actualGraph"></div>
+          </div>
+          <div class="time"></div>
+        </div>
 
-				<div class="time-button-container">
-					<div class="time-button">
-						<div class="buttons" onclick="changeActive2(this)">Live</div>
-						<div class="buttons active" onclick="changeActive2(this)">
-							1 hour
-						</div>
-						<div class="buttons" onclick="changeActive2(this)">1 day</div>
-						<div class="buttons" onclick="changeActive2(this)">1 week</div>
-					</div>
-					<div name="tset"></div>
-				</div>
-			</div>
-			
-		</div>
-		<div id="test"></div>
-		
-		<script src="script.js"></script>
-	</body>
+        <div class="time-button-container">
+          <div class="time-button">
+            <div class="buttons" onclick="changeActive2(this)">Live</div>
+            <div class="buttons active" onclick="changeActive2(this)">
+              1 hour
+            </div>
+            <div class="buttons" onclick="changeActive2(this)">1 day</div>
+            <div class="buttons" onclick="changeActive2(this)">1 week</div>
+          </div>
+          <div name="tset"></div>
+        </div>
+      </div>
+    </div>
+    <div id="test"></div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
