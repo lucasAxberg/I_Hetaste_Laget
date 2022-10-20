@@ -1,179 +1,187 @@
 @font-face {
-  font-family: "oswaldregular";
-  src: url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
-      format("woff2"),
-    url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
-      format("woff");
-  font-weight: normal;
-  font-style: normal;
+	font-family: "oswaldregular";
+	src: url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
+			format("woff2"),
+		url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {
-  padding: 0px;
-  margin: 0px;
+	padding: 0px;
+	margin: 0px;
 }
 
 .navbar {
-  display: flex;
-  background-color: #333;
-  height: 6vh;
-  min-height: 70px;
-  width: 100%;
-  position: fixed;
-  justify-content: start;
+	display: flex;
+	background-color: #333;
+	height: 6vh;
+	min-height: 65px;
+	width: 100%;
+	position: fixed;
+	justify-content: start;
 }
 
 .menubutton {
-  background-color: rgb(35, 35, 35);
-  height: calc(100% - 34px);
-  width: 6vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 17px;
-  padding-bottom: 17px;
-  cursor: pointer;
+	background-color: rgb(35, 35, 35);
+	height: calc(100% - 34px);
+	width: 6vh;
+	min-width: 65px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	cursor: pointer;
 }
 
 .menu-stripe {
-  width: 60%;
-  height: 6px;
-  background-color: white;
-  border-radius: 1000px;
+	width: 60%;
+	height: 6px;
+	background-color: white;
+	border-radius: 1000px;
 }
 
 .menubutton:hover {
-  background-color: darkgrey;
+	background-color: darkgrey;
 }
 
 #title {
-  color: white;
-  width: 96%;
-  font-size: 4vh;
-  font-family: oswaldregular;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1vh;
+	color: white;
+	width: 96%;
+	font-size: 4vh;
+	font-family: oswaldregular;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 1vh;
 }
 
 .header {
-  width: 100%;
-  height: 5vh;
-  /* background-color: #333; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: monospace;
-  font-weight: 800;
-  font-size: 3vh;
+	width: 100%;
+	height: 5vh;
+	/* background-color: #333; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: monospace;
+	font-weight: 800;
+	font-size: 3vh;
 }
 
 .paragraph {
-  font-family: oswaldregular;
-  font-size: 26px;
-  padding: 0.5em;
-  background-color: #2b7a78;
+	font-family: oswaldregular;
+	font-size: 26px;
+	padding: 0.5em;
+	background-color: #2b7a78;
 
-  height: calc(100% - 5vh - 1em);
-  border-radius: 7px;
+	height: calc(100% - 5vh - 1em);
+	border-radius: 7px;
 }
 
 #main-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  height: 94vh;
-  width: 100%;
-  padding-top: 6vh;
-  background-color: #3aafa9;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	height: calc(100vh - max(6vh, 65px));
+	width: 100%;
+	padding-top: max(6vh, 65px);
+	background-color: #3aafa9;
 }
 
 #left-container {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  /* background-color: blue; */
-  padding-bottom: 6vh;
-  padding-left: 4vw;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	/* background-color: blue; */
+	padding-bottom: 6vh;
+	padding-left: 4vw;
 }
 
 #project {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 
 #how {
-  height: 55%;
-  width: 20vw;
-  /* background-color: #2b7a78; */
+	height: 55%;
+	width: 20vw;
+	/* background-color: #2b7a78; */
 }
 
 #about {
-  height: 35%;
-  aspect-ratio: 1;
-  /* background-color: #2b7a78; */
-  border-radius: 1000px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
-  overflow: hidden;
-  cursor: pointer;
+	height: 34vh;
+	width: 34vh;
+
+	/* background-color: #2b7a78; */
+	border-radius: 1000px;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	align-items: center;
+	overflow: hidden;
+	cursor: pointer;
 }
 
 #about:hover {
-  transform: translateY(-0.25em);
+	transform: translateY(-0.5vh) translateX(-0.25vw);
+}
+
+#about-shadow {
+	background-color: #222;
+	border-radius: 1000px;
+	/* opacity: 0.2; */
 }
 
 #groupImage {
-  height: 70%;
-  object-fit: cover;
+	height: 70%;
+	object-fit: cover;
 }
 
 #aboutText {
-  height: 30%;
-  width: 100%;
-  background-color: #2b7a78;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  font-family: oswaldregular;
-  -webkit-user-select: none;
-  user-select: none;
+	height: 30%;
+	width: 100%;
+	background-color: #2b7a78;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 4vh;
+	font-family: oswaldregular;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 #right-container {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  /* background-color: blue; */
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	/* background-color: blue; */
 }
 
 #top {
-  width: 80%;
-  height: 35%;
-  /* background-color: yellow; */
-  margin-right: 10%;
+	width: 80%;
+	height: 35%;
+	/* background-color: yellow; */
+	margin-right: 10%;
 }
 
 #bottom {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin-right: 10%;
-  height: 55%;
-  /* background-color: darkgrey; */
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin-right: 10%;
+	height: 55%;
+	/* background-color: darkgrey; */
 }
 
 .infoButton {
-  width: 20vw;
-  /* background-color: #2b7a78; */
+	width: 20vw;
+	/* background-color: #2b7a78; */
 }
