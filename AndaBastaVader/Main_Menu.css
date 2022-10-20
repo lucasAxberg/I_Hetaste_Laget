@@ -198,9 +198,13 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: black;
+	background-color: #333;
 	justify-self: end;
 	width: 60%;
-	padding: 10%;
+	padding: 5%;
 	margin-bottom: 30%;
+}
+
+.measurement-button:hover {
+	transform: translatey(-0.25vh) translateX(-0.125vw);
 }
