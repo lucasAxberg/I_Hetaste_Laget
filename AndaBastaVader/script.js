@@ -1,3 +1,26 @@
+
+let weather = {
+	state: "rain",
+	TemperatureCelcius: 18.0,
+	humidity: 0,
+	time: 0,
+	timestate: "noon"
+}
+
+const date = Date.now();
+console.log(date);
+
+let TemperatureFarenheight = Math.round(((weather.TemperatureCelcius * 1.8 + 32)*10)/10);
+
+
+document.getElementById("container").style.backgroundImage = "url('Images/omg/P1.jpg')"
+
+
+console.log(weather.state)
+	if (weather.state == "rain") {
+		console.log("hej");
+	}
+
 function TempButtonFunction(obj) {
   // alert(obj.id);
   console.log(obj.id);
@@ -17,13 +40,11 @@ function TempButtonFunction(obj) {
   Convertion(obj);
 }
 
-let OriginValue = document.getElementById("temp").innerHTML;
-console.log(OriginValue);
-let StartUnit;
 
 let parent = document.getElementsByClassName("temp-button");
 let buttonChildren = parent[0].children;
 console.log(buttonChildren);
+
 
 for (let i = 0; i < buttonChildren.length; i++) {
   if (buttonChildren[i].classList.contains("active")) {
@@ -31,19 +52,20 @@ for (let i = 0; i < buttonChildren.length; i++) {
   }
 }
 
+
 function Convertion(obj) {
   let temperature = document.getElementById("temp");
   if (obj.id == "F") {
     if (obj.id == StartUnit) {
-      temperature.innerHTML = OriginValue;
+      temperature.innerHTML = weather.TemperatureCelcius;
       return;
     }
     temperature.innerHTML =
-      Math.round((temperature.innerHTML * 1.8 + 32) * 10) / 10;
+      TemperatureFarenheight;
     // Converts the temp to farenheit from celsius with 1 decimal point
   } else if (obj.id == "C") {
     if (obj.id == StartUnit) {
-      temperature.innerHTML = OriginValue;
+      temperature.innerHTML = weather.TemperatureCelcius;
       return;
     }
     temperature.innerHTML =
@@ -69,3 +91,10 @@ function changeActive2(obj) {
   }
   obj.classList.add("active");
 }
+
+
+
+
+
+	
+
