@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "oswaldregular";
-	src: url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
+	src: url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
 			format("woff2"),
-		url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
+		url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
 			format("woff");
 	font-weight: normal;
 	font-style: normal;
@@ -203,8 +203,11 @@ body {
 	width: 60%;
 	padding: 5%;
 	margin-bottom: 30%;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 .measurement-button:hover {
-	transform: translatey(-0.25vh) translateX(-0.125vw);
+	transform: translatey(-0.4vh) translateX(-0.2vw);
+	box-shadow: 0.2vw 0.4vh #222;
 }
