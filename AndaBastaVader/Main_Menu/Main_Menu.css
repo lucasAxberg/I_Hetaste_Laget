@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "oswaldregular";
-	src: url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
+	src: url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
 			format("woff2"),
-		url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
+		url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
 			format("woff");
 	font-weight: normal;
 	font-style: normal;
