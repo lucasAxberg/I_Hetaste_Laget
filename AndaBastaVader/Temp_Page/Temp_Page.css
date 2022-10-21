@@ -1,8 +1,8 @@
 @font-face {
   font-family: "oswaldregular";
-  src: url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
+  src: url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
       format("woff2"),
-    url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
+    url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
       format("woff");
   font-weight: normal;
   font-style: normal;
@@ -49,7 +49,7 @@ body {
   padding-top: 150px;
   height: 100vh;
 
-  background-image: url(../AndaBastaVader/Images/omg/1667.jpg);
+  background-image: url(../Images/omg/2201_w026_n002_1375b_p1_1375.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: fixed;
