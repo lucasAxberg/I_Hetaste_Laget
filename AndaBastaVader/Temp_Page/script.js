@@ -1,16 +1,17 @@
 
 let weather = {
 	state: "rain",
-	TemperatureCelcius: 18.0,
+	TemperatureCelcius: 18,
 	humidity: 0,
 	time: 0,
 	timestate: "noon"
 }
 
+
 const date = Date.now();
 console.log(date);
 
-let TemperatureFarenheight = Math.round(((weather.TemperatureCelcius * 1.8 + 32)*10)/10);
+let TemperatureFarenheight = Math.round(weather.TemperatureCelcius * 1.8 + 32);
 
 
 document.getElementById("container").style.backgroundImage = "url('Images/omg/P1.jpg')"
@@ -68,8 +69,7 @@ function Convertion(obj) {
       temperature.innerHTML = weather.TemperatureCelcius;
       return;
     }
-    temperature.innerHTML =
-      Math.round(((temperature.innerHTML - 32) / 1.8) * 10) / 10;
+    temperature.innerHTML = weather.TemperatureCelcius;
     // Converts the temp to celsius from farenheit with 1 decimal point
   }
 }
