@@ -19,6 +19,7 @@ body {
   display: flex;
   background-color: #333;
   height: 6vh;
+  min-height: 65px;
   width: 100%;
   position: fixed;
   justify-content: start;
@@ -28,7 +29,7 @@ body {
 .menubutton {
   background-color: rgb(35, 35, 35);
   height: calc(100% - 34px);
-  width: 6vh;
+  width: max(6vh, 65px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -38,7 +39,7 @@ body {
 }
 
 .menubutton:hover {
-  background-color: darkgrey;
+  background-color: rgba(44, 68, 68, 0.599);
 }
 
 .container {
@@ -48,7 +49,7 @@ body {
   padding-top: 150px;
   height: 100vh;
 
-  background-image: url(../AndaBastaVader/Images/wallapaper2.webp);
+  background-image: url(../AndaBastaVader/Images/omg/1667.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: fixed;
@@ -60,7 +61,7 @@ body {
 }
 .display {
   background-color: white;
-  opacity: 0.3;
+  opacity: 0.8;
   width: 100%;
   height: 70%;
   border-radius: 15px;
@@ -87,13 +88,14 @@ body {
   display: flex;
 }
 .temp-button {
-  background-color: darkgrey;
+  background-color: rgb(38, 85, 97);
   flex-grow: 1;
   margin: 35px;
   border-radius: 10px;
   display: flex;
   justify-content: space-around;
   border: 3px solid #333333;
+  opacity: 0.95; 
 }
 .temp-button div {
   width: 50%;
@@ -115,13 +117,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: end;
+  opacity: 0.7;
 }
 
 .horizontal-graph {
   display: flex;
   width: 100%;
   height: 90%;
-  background-color: darkgrey;
+  background-color: rgb(255, 255, 255);
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
@@ -129,19 +132,19 @@ body {
 .amplitude {
   height: 100%;
   width: 5%;
-  background-color: darkgrey;
+  background-color: rgb(255, 255, 255);
   border-top-left-radius: 10px;
   border-right: 3px solid black;
 }
 
 .actualGraph {
-  background-color: darkgrey;
+  background-color: rgb(255, 255, 255);
   width: calc(95% - 3px);
   border-top-right-radius: 10px;
 }
 
 .time {
-  background-color: darkgrey;
+  background-color: rgb(255, 255, 255);
   width: 95%;
   height: calc(15% - 3px);
   border-bottom-right-radius: 10px;
@@ -156,10 +159,11 @@ body {
 .time-button {
   margin: 35px;
   flex-grow: 1;
-  background-color: darkgrey;
+  background-color: rgb(87, 145, 141);
   border-radius: 10px;
   display: flex;
   border: 3px solid #333;
+  opacity: 0.9;
 }
 .time-button div {
   width: 25%;
@@ -190,4 +194,8 @@ body {
   height: 6px;
   background-color: white;
   border-radius: 1000px;
+}
+
+.urgens {
+	background-color: white;
 }
