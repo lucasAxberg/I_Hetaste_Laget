@@ -203,6 +203,8 @@ body {
 	width: 60%;
 	padding: 5%;
 	margin-bottom: 30%;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 .measurement-button:hover {

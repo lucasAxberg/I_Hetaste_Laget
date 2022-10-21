@@ -1,4 +1,4 @@
 function goToAbout() {
-	window.open("2nd.html", "_self");
+	window.open("About_Us.html", "_self");
 	alert("Hellos");
 }
