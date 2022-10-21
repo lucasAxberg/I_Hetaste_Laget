@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "oswaldregular";
+  src: url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
+      format("woff2"),
+    url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  background-color: rgb(5, 210, 246);
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  background-color: #333;
+  height: 6vh;
+  width: 100%;
+  position: fixed;
+  justify-content: start;
+  z-index: 2;
+}
+
+.menubutton {
+  background-color: rgb(35, 35, 35);
+  height: calc(100% - 34px);
+  width: 6vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.menubutton:hover {
+  background-color: darkgrey;
+}
+
+.container {
+  display: flex;
+  background-color: cyan;
+  justify-content: space-around;
+  padding-top: 150px;
+  height: 100vh;
+
+  background-image: url(../AndaBastaVader/Images/wallapaper2.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+}
+
+.display-container {
+  width: 25%;
+  height: 60%;
+}
+.display {
+  background-color: white;
+  opacity: 0.3;
+  width: 100%;
+  height: 70%;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: oswaldregular;
+  font-weight: 600;
+}
+
+#temp {
+  font-size: 75px;
+  margin-bottom: 10px;
+}
+
+#humidity {
+  font-size: 35px;
+}
+
+.temp-button-container {
+  height: 150px;
+  /* background-color: black; */
+  display: flex;
+}
+.temp-button {
+  background-color: darkgrey;
+  flex-grow: 1;
+  margin: 35px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  border: 3px solid #333333;
+}
+.temp-button div {
+  width: 50%;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.graph-container {
+  width: 50%;
+  height: 60%;
+  /* background-color: orange; */
+  flex-direction: row;
+}
+
+.graph {
+  background-color: darkgrey;
+  height: 70%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.horizontal-graph {
+  display: flex;
+  width: 100%;
+  height: 90%;
+  background-color: darkgrey;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.amplitude {
+  height: 100%;
+  width: 5%;
+  background-color: darkgrey;
+  border-top-left-radius: 10px;
+  border-right: 3px solid black;
+}
+
+.actualGraph {
+  background-color: darkgrey;
+  width: calc(95% - 3px);
+  border-top-right-radius: 10px;
+}
+
+.time {
+  background-color: darkgrey;
+  width: 95%;
+  height: calc(15% - 3px);
+  border-bottom-right-radius: 10px;
+  border-top: 3px solid black;
+}
+
+.time-button-container {
+  height: 150px;
+  /* background-color: black; */
+  display: flex;
+}
+.time-button {
+  margin: 35px;
+  flex-grow: 1;
+  background-color: darkgrey;
+  border-radius: 10px;
+  display: flex;
+  border: 3px solid #333;
+}
+.time-button div {
+  width: 25%;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.buttons {
+  /* width: 25%; */
+  border-radius: 5px;
+  margin: 0px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: 28px;
+  font: monospace;
+}
+
+.active {
+  background-color: lightblue;
+}
+
+.menu-stripe {
+  width: 60%;
+  height: 6px;
+  background-color: white;
+  border-radius: 1000px;
+}
