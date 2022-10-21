@@ -208,5 +208,6 @@ body {
 }
 
 .measurement-button:hover {
-	transform: translatey(-0.25vh) translateX(-0.125vw);
+	transform: translatey(-0.4vh) translateX(-0.2vw);
+	box-shadow: 0.2vw 0.4vh #222;
 }
