@@ -1,0 +1,22 @@
+body {
+	background-image: url(../Images/matrix.gif);
+
+	background-repeat: no-repeat;
+	background-size: 100vw 100vh;
+	background-attachment: fixed;
+	display: flex;
+	margin: 0;
+}
+
+.sidebar {
+	width: 15vw;
+	background-color: black;
+	opacity: 0.7;
+	height: 200vh;
+}
+.main-content {
+	background-color: white;
+	opacity: 0.8;
+	width: 70vw;
+	height: 200vh;
+}
