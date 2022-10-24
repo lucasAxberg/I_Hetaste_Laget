@@ -34,3 +34,8 @@ function check() {
 	  
 	}
   }
+
+function goToPrev() {
+	window.open("../Previous/Previous.html", "_self");
+}
+
