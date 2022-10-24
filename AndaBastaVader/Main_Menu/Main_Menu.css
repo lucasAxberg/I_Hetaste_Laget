@@ -68,12 +68,12 @@ body {
 	align-items: center;
 	font-family: monospace;
 	font-weight: 800;
-	font-size: 4vh;
+	font-size: 3vh;
 }
 
 .paragraph {
 	font-family: oswaldregular;
-	font-size: 24px;
+	font-size: 3vh;
 	padding: 0.5em;
 	background-color: #2b7a78;
 	color: #def2f1;
