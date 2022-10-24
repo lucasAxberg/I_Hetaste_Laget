@@ -1,8 +1,8 @@
 @font-face {
   font-family: "oswaldregular";
-  src: url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
+  src: url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
       format("woff2"),
-    url("webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
+    url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
       format("woff");
   font-weight: normal;
   font-style: normal;
@@ -17,7 +17,7 @@ body {
 
 .navbar {
   display: flex;
-  background-color: #333;
+  background-color: rgb(52, 52, 52);
   height: 6vh;
   min-height: 65px;
   width: 100%;
@@ -36,10 +36,49 @@ body {
   align-items: center;
   padding-top: 17px;
   padding-bottom: 17px;
+  transition:  0.4s;
 }
 
-.menubutton:hover {
-  background-color: rgba(44, 68, 68, 0.599);
+
+
+
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+
+.change #stripe1 {
+  transform: translate(0, 12.5px) rotate(-45deg);
+}
+
+.change #stripe2 {opacity: 0;}
+
+.change #stripe3 {
+  transform: translate(0, -12.5px) rotate(45deg);
 }
 
 .container {
@@ -49,7 +88,7 @@ body {
   padding-top: 150px;
   height: 100vh;
 
-  background-image: url(../AndaBastaVader/Images/omg/1667.jpg);
+  background-image: url(../Images/omg/2201_w026_n002_1375b_p1_1375.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: fixed;
