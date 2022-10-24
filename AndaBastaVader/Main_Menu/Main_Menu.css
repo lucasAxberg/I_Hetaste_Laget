@@ -15,44 +15,39 @@ body {
 
 .navbar {
   display: flex;
-  background-color: rgb(52, 52, 52);
-  height: 8vh;
+  background-color: #333;
+  height: 6vh;
   min-height: 65px;
   width: 100%;
   position: fixed;
   justify-content: start;
-  z-index: 2;
 }
 
 .menubutton {
-  background-color: transparent;
+  background-color: rgb(35, 35, 35);
   height: calc(100% - 34px);
-  width: max(6vh, 65px);
+  width: 6vh;
+  min-width: 65px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-top: 17px;
   padding-bottom: 17px;
-  transition:  0.4s;
-  z-index: 5;
+  cursor: pointer;
 }
 
-.menu-stripe{
-  background-color: #fff;
-  z-index: 5;
+.menu-stripe {
   width: 60%;
   height: 6px;
+  background-color: white;
   border-radius: 1000px;
 }
 
-
-
-#menu__toggle { visibility: hidden;}
-
-#menu__toggle:checked ~ .menu__box {
-  left: 0 !important;
+.menubutton:hover {
+  background-color: darkgrey;
 }
+
 
 
 .menu__box {
@@ -102,6 +97,7 @@ body {
   font-weight: bold;
 }
 
+
 #title {
 	color: white;
 	width: 96%;
@@ -112,6 +108,7 @@ body {
 	align-items: center;
 	padding-top: 1vh;
 }
+
 .header {
 	width: 100%;
 	height: 5vh;
