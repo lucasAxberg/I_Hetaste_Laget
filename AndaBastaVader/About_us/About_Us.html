@@ -5,21 +5,34 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link rel="stylesheet" href="About_Us.css">
 	</head>
 	<body>
-		<style>
-			body {
-				background-image: url(../AndaBastaVader/Images/matrix.gif);
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-position: fixed;
-			}
+		<div class="navbar" >
+			<div class="menubutton" onclick="menuButton(this)">
+			  <div class="menu-stripe" id = "stripe1"></div>
+			  <div class="menu-stripe" id = "stripe2"></div>
+			  <div class="menu-stripe" id = "stripe3"></div>
+			</div>
+			
+			<div class="hamburger-menu">
+			  <input id="menu__toggle" type="checkbox"> 
+			  <ul class="menu__box">
+				<li><a class="menu__item" href="../Main_Menu/Main_Menu.html">Hem</a></li>
+				<li><a class="menu__item" href="..//About_us/About_Us.html">Om oss</a></li>
+				<li><a class="menu__item" href="..//Temp_Page/Temp_Page.html">Temperatur</a></li>
+				<li><a class="menu__item" href="#">Tidigare</a></li>
+				<li><a class="menu__item" href="#">Väder formuläret</a></li>
+				<li><a class="menu__item" href="#">Inställningar</a></li>
+			  </ul>
+	  
+			</div>
 
-			a {
-				background-color: white;
-				text-decoration: none;
-			}
-		</style>
-		<a href="Temp_Page.html">Godbye</a>
+			<div class="headingContainer">
+			  <div class="heading">Om oss</div>
+			</div>
+		</div>
+
+		<script src = "About_Us_Script.js"> </script>
 	</body>
 </html>

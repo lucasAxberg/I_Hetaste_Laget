@@ -16,18 +16,8 @@ let backgroundImages = {
   Thunder: ["Thunder1"]
 }
 
-seb = document.getElementById("banan");
-
 
 console.log(backgroundImages);
-
-function check() {
-  document.getElementById("menu__toggle").checked = true;
-}
-
-function uncheck() {
-  document.getElementById("menu__toggle").checked = false;
-}
 
 let TemperatureFarenheight = Math.round(weather.TemperatureCelcius * 1.8 + 32);
 
@@ -116,6 +106,14 @@ function changeActive2(obj) {
     }
   }
   obj.classList.add("active");
+}
+
+function check() {
+  document.getElementById("menu__toggle").checked = true;
+}
+
+function uncheck() {
+  document.getElementById("menu__toggle").checked = false;
 }
 
 let s = 1;
