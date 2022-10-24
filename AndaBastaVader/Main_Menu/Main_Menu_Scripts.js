@@ -5,3 +5,7 @@ function goToAbout() {
 function goToTemp() {
 	window.open("../Temp_Page/Temp_Page.html", "_self");
 }
+
+function goToPrev() {
+	window.open("../Previous/Previous.html", "_self");
+}
