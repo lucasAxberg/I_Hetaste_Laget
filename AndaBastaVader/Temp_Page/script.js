@@ -4,23 +4,40 @@ let weather = {
 	TemperatureCelcius: 18,
 	humidity: 0,
 	time: 0,
-	timestate: "noon"
+	timestate: "noon",
+  season: "winter"
+}
+
+let backgroundImages = {
+  normal: ["p1", "p2", "p3", "p4","p5", "p6", "p7", "p8"],
+  sunSetRise: ["sunrise1", "sunrise2", "sunrise3", "sunrise4"],
+  night: ["night1", "night2", "night3"],
+  rain: ["rain1", "rain2", "rain3"],
+  Thunder: ["Thunder1"]
 }
 
 
-const date = Date.now();
-console.log(date);
+console.log(backgroundImages);
+
 
 let TemperatureFarenheight = Math.round(weather.TemperatureCelcius * 1.8 + 32);
 
+function changebackgroundImage() {
+  let backgroundImageUrl = {start: "../images/omg/", ending: ".jpg"}
+  let random;  
+  let ImmageUrl;
+  if (weather.state == "rain") {
+    random = Math.floor(Math.random() * 1);
 
-document.getElementById("container").style.backgroundImage = "url('Images/omg/P1.jpg')"
+    ImageuUrl = backgroundImageUrl.start.concat(backgroundImages.rain[random], backgroundImageUrl.ending);
+    console.log(ImageuUrl);
 
+    document.getElementById("container").style.backgroundImage = 'url("../images/omg/p5.jpg")'
+  }
+  return;
+}
 
-console.log(weather.state)
-	if (weather.state == "rain") {
-		console.log("hej");
-	}
+changebackgroundImage();
 
 function TempButtonFunction(obj) {
   // alert(obj.id);
@@ -92,8 +109,25 @@ function changeActive2(obj) {
   obj.classList.add("active");
 }
 
+let s = 1;
+function menuButton(x) {
+  console.log("hej")
+  x.classList.toggle("change");
+  let parent = x.parentElement
+  console.log(parent)
+  
+  if (s == 2) {
+    parent.style.background = "#333333";
+    s = 1;
+  }
+  else {
+    parent.style.background = "#444444";
+    s = 2;
+    console.log(s)
+  }
+}
 
-
+document.getElementById("menu_toggle").checked = true; 
 
 
 	
