@@ -11,7 +11,6 @@
   body {
     margin: 0;
     display: flex;
-    background-color: rgb(5, 210, 246);
     flex-direction: column;
   }
 
@@ -39,6 +38,10 @@
     transition:  0.4s;
     z-index: 5;
   }
+  .menubutton:hover {
+   
+    opacity: 0.4;
+ }
   
   .menu-stripe{
     background-color: #fff;
@@ -102,3 +105,11 @@
     color:rgb(255, 255, 255);
     font-weight: bold;
   }
+
+  .menu__item:hover {background-color: aqua;}
+
+  #settings {
+    display : flex;
+    background-color: #4ea9b7;
+}
+
