@@ -1,3 +1,13 @@
+@font-face {
+	font-family: "oswaldregular";
+	src: url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
+			format("woff2"),
+		url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
 	background-image: url(../Images/matrix.gif);
 
@@ -19,4 +29,18 @@ body {
 	opacity: 0.8;
 	width: 70vw;
 	height: 200vh;
+}
+
+h1 {
+	font-family: Monospace;
+	font-size: 6vh;
+	display: flex;
+	justify-content: center;
+}
+.text {
+	font-size: 3vh;
+	font-family: oswaldregular;
+	display: flex;
+	justify-content: center;
+	margin: 2vw;
 }
