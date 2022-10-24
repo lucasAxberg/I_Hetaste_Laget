@@ -15,38 +15,91 @@ body {
 
 .navbar {
   display: flex;
-  background-color: #333;
-  height: 6vh;
+  background-color: rgb(52, 52, 52);
+  height: 8vh;
   min-height: 65px;
   width: 100%;
   position: fixed;
   justify-content: start;
+  z-index: 2;
 }
 
 .menubutton {
-  background-color: rgb(35, 35, 35);
+  background-color: transparent;
   height: calc(100% - 34px);
-  width: 6vh;
-  min-width: 65px;
+  width: max(6vh, 65px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-top: 17px;
   padding-bottom: 17px;
-  cursor: pointer;
+  transition:  0.4s;
+  z-index: 5;
 }
 
-.menu-stripe {
+.menu-stripe{
+  background-color: #fff;
+  z-index: 5;
   width: 60%;
   height: 6px;
-  background-color: white;
   border-radius: 1000px;
 }
 
-.menubutton:hover {
-  background-color: darkgrey;
+
+
+#menu__toggle { visibility: hidden;}
+
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
 }
+
+
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #4ea9b7;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+}
+.menu__item {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+
+.change #stripe1 {
+  transform: translate(0, 12.5px) rotate(-45deg);
+}
+
+.change #stripe2 {opacity: 0;}
+
+.change #stripe3 {
+  transform: translate(0, -12.5px) rotate(45deg);
+}
+
+.headingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100vw - max(6vh, 65px));
+  font-size: 5vh;
+  font-family: 'Roboto', sans-serif;
+  color:rgb(255, 255, 255);
+  font-weight: bold;
 
 #title {
 	color: white;
@@ -58,7 +111,6 @@ body {
 	align-items: center;
 	padding-top: 1vh;
 }
-
 .header {
 	width: 100%;
 	height: 5vh;
