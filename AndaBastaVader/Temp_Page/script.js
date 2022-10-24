@@ -22,18 +22,10 @@ console.log(backgroundImages);
 let TemperatureFarenheight = Math.round(weather.TemperatureCelcius * 1.8 + 32);
 
 function changebackgroundImage() {
-  let backgroundImageUrl = {start: "../images/omg/", ending: ".jpg"}
-  let random;  
-  let ImmageUrl;
-  if (weather.state == "rain") {
-    random = Math.floor(Math.random() * 1);
+ 
+  date = new Date();
 
-    ImageuUrl = backgroundImageUrl.start.concat(backgroundImages.rain[random], backgroundImageUrl.ending);
-    console.log(ImageuUrl);
-
-    document.getElementById("container").style.backgroundImage = 'url("../images/omg/p5.jpg")'
-  }
-  return;
+  console.log(date);
 }
 
 changebackgroundImage();
@@ -136,5 +128,6 @@ function menuButton(x) {
     
   }
 }
+
 
 
