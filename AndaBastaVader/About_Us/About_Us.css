@@ -1,0 +1,58 @@
+@font-face {
+	font-family: "oswaldregular";
+	src: url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
+			format("woff2"),
+		url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	background-color: rgb(5, 210, 246);
+	flex-direction: column;
+}
+
+.navbar {
+	display: flex;
+	background-color: rgb(52, 52, 52);
+	height: 6vh;
+	min-height: 65px;
+	width: 100%;
+	position: fixed;
+	justify-content: start;
+	z-index: 2;
+}
+
+.menubutton {
+	background-color: rgb(35, 35, 35);
+	height: calc(100% - 34px);
+	width: max(6vh, 65px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	transition: 0.4s;
+}
+
+.menu-stripe {
+	width: 60%;
+	height: max(0.75vh, 6px);
+	background-color: white;
+	border-radius: 1000px;
+}
+
+.title-container {
+	width: calc(100% - (2 * max(6vh, 65px)));
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: oswaldregular;
+	font-size: 5vh;
+	color: white;
+}
