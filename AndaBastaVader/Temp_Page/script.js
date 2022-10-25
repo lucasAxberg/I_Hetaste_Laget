@@ -112,3 +112,52 @@ function openMenu() {
 	document.getElementById("stripe2").classList.toggle("change-stripe2");
 	document.getElementById("stripe3").classList.toggle("change-stripe3");
 }
+
+const ctx = document.getElementById("graph").getContext("2d");
+const myChart = new Chart(ctx, {
+	type: "line",
+	data: {
+		labels: [
+			"01",
+			"02",
+			"03",
+			"04",
+			"05",
+			"06",
+			"07",
+			"08",
+			"09",
+			"10",
+			"11",
+			"12",
+			"13",
+			"14",
+			"15",
+			"16",
+			"17",
+			"18",
+			"19",
+			"20",
+			"21",
+			"22",
+			"23",
+			"24",
+		],
+		datasets: [
+			{
+				label: "Temperatur",
+				data: [22.5, 19.4, 20.5, 21.2, 21.5, 21.3, 23.5, 22.6, 24.6, 21.4],
+				backgroundColor: ["rgba(0, 91, 150, 0.4)"],
+				borderColor: ["rgba(0, 91, 150, 0.4)"],
+				borderWidth: 4,
+			},
+		],
+	},
+	options: {
+		scales: {
+			y: {
+				beginAtZero: true,
+			},
+		},
+	},
+});
