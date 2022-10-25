@@ -133,7 +133,7 @@ body {
 	font-family: oswaldregular;
 	font-size: 3vh;
 	padding: 0.5em;
-	background-color: #2b7a78;
+	background-color: #6497b1;
 	color: #def2f1;
 
 	height: calc(100% - 5vh - 1em);
@@ -142,7 +142,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	box-shadow: 0.25vh 0.25vh 2vh #333, -0.25vh -0.25vh 2vh #2b7a7878;
+	box-shadow: 0.25vh 0.25vh 2vh #333, -0.25vh -0.25vh 2vh #6497b178;
 }
 
 #main-container {
@@ -152,7 +152,7 @@ body {
 	height: calc(100vh - max(6vh, 65px));
 	width: 100%;
 	padding-top: max(6vh, 65px);
-	background-color: #3aafa9;
+	background-color: #b3cde0;
 }
 
 #left-container {
@@ -200,7 +200,7 @@ body {
 	background-color: #222;
 	border-radius: 1000px;
 	/* opacity: 0.2; */
-	box-shadow: 0.25vh 0.25vh 2vh #333, -0.25vh -0.25vh 2vh #2b7a7878;
+	box-shadow: 0.25vh 0.25vh 2vh #333, -0.25vh -0.25vh 2vh #6497b178;
 }
 
 #groupImage {
@@ -211,7 +211,7 @@ body {
 #aboutText {
 	height: 30%;
 	width: 100%;
-	background-color: #2b7a78;
+	background-color: #6497b1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
