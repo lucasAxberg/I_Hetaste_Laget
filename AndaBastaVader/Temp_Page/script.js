@@ -23,9 +23,9 @@ let TemperatureFarenheight = Math.round(weather.TemperatureCelcius * 1.8 + 32);
 
 function changebackgroundImage() {
  
-  date = new Date();
-
-  console.log(date);
+  let date = new Date();
+  
+  document.getElementById("dateText").innerHTML = date.getDay;
 }
 
 changebackgroundImage();
@@ -128,6 +128,7 @@ function menuButton(x) {
     
   }
 }
+
 
 
 
