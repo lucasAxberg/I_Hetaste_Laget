@@ -39,6 +39,10 @@ body {
 	transition: 0.4s;
 }
 
+.menubutton:hover {
+	background-color: darkgrey;
+}
+
 .menu-stripe {
 	width: 60%;
 	height: max(0.75vh, 6px);
@@ -55,4 +59,50 @@ body {
 	font-family: oswaldregular;
 	font-size: 5vh;
 	color: white;
+}
+
+#sideMenu {
+	margin-top: max(6vh, 65px);
+	height: 40vh;
+	width: 15vw;
+	z-index: 2;
+	position: fixed;
+	background-color: #333;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
+.menuItem {
+	height: 25%;
+	color: white;
+	width: 100%;
+	font-family: oswaldregular;
+	font-size: 3vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.menuItem:hover {
+	background-color: #555;
+}
+
+.toTheSide {
+	margin-left: -100vh;
+}
+
+.change-stripe1 {
+	transform: translate(0, 12.5px) rotate(-45deg);
+}
+
+.change-stripe2 {
+	opacity: 0;
+}
+
+.change-stripe3 {
+	transform: translate(0, -12.5px) rotate(45deg);
 }
