@@ -251,3 +251,14 @@ body {
 .urgens {
 	background-color: white;
 }
+
+.date {
+  height: 150px;
+  background-color: #84848474;
+}
+
+#dateText {
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
