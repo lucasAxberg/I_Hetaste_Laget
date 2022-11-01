@@ -15,5 +15,13 @@ const firebaseConfig = {
 	appId: "1:608237085804:web:216a3403321d1c36db6449",
 };
 
+let data;
+
 firebase.initializeApp(firebaseConfig);
-const dataBase = firebase.database().ref();
+const dataBase = firebase.database().ref("Arduino1/current");
+dataBase.on("value", (snapshot) => {
+	data = snapshot.val();
+	console.log(data);
+	console.log(data["hum"]);
+	console.log(data["temp"]);
+});
