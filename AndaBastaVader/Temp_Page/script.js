@@ -36,7 +36,7 @@ function changebackgroundImage() {
 	return;
 }
 
-changebackgroundImage();
+// changebackgroundImage();
 
 function TempButtonFunction(obj) {
 	// alert(obj.id);
