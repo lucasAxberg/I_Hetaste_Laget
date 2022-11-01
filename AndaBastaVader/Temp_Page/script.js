@@ -1,10 +1,10 @@
 let weather = {
 	state: "rain",
-	TemperatureCelcius: 18,
-	humidity: 0,
-	time: 0,
-	timestate: "noon",
-	season: "winter",
+	// 	TemperatureCelcius: 18,
+	// 	humidity: 0,
+	// 	time: 0,
+	// 	timestate: "noon",
+	// 	season: "winter",
 };
 
 let backgroundImages = {
@@ -15,9 +15,7 @@ let backgroundImages = {
 	Thunder: ["Thunder1"],
 };
 
-console.log(backgroundImages);
-
-let TemperatureFarenheight = Math.round(weather.TemperatureCelcius * 1.8 + 32);
+// console.log(backgroundImages);
 
 function changebackgroundImage() {
 	let backgroundImageUrl = { start: "../images/omg/", ending: ".jpg" };
@@ -57,34 +55,20 @@ function TempButtonFunction(obj) {
 	}
 	obj.classList.add("active");
 	Convertion(obj);
+	console.log(currentTemp);
 }
 
-let parent = document.getElementsByClassName("temp-button");
-let buttonChildren = parent[0].children;
-console.log(buttonChildren);
-
-for (let i = 0; i < buttonChildren.length; i++) {
-	if (buttonChildren[i].classList.contains("active")) {
-		StartUnit = buttonChildren[i].id;
-	}
-}
+let TemperatureFarenheight = Math.round(weather.TemperatureCelcius * 1.8 + 32);
 
 function Convertion(obj) {
 	let temperature = document.getElementById("temp");
 	if (obj.id == "F") {
-		if (obj.id == StartUnit) {
-			temperature.innerHTML = weather.TemperatureCelcius;
-			return;
-		}
-		temperature.innerHTML = TemperatureFarenheight;
+		let farenheitTemp = Math.round((currentTemp * 1.8 + 32) * 10) / 10;
+		temperature.innerHTML = `${farenheitTemp}°F`;
 		// Converts the temp to farenheit from celsius with 1 decimal point
 	} else if (obj.id == "C") {
-		if (obj.id == StartUnit) {
-			temperature.innerHTML = weather.TemperatureCelcius;
-			return;
-		}
-		temperature.innerHTML = weather.TemperatureCelcius;
-		// Converts the temp to celsius from farenheit with 1 decimal point
+		temperature.innerHTML = `${currentTemp}°C`;
+		// Sets the temp to what it is on the database
 	}
 }
 
@@ -112,6 +96,13 @@ function openMenu() {
 	document.getElementById("stripe2").classList.toggle("change-stripe2");
 	document.getElementById("stripe3").classList.toggle("change-stripe3");
 }
+
+let TempData = [22.5, 19.4, 20.5, 21.2, 21.5, 21.3, 23.5, 22.6, 24.6, 21.4];
+let HumData = [
+	46.2, 45.4, 44.5, 44.7, 45.2, 46.1, 46.4, 46.9, 47.1, 44.5, 78.3,
+];
+
+let maxY = 100;
 
 const ctx = document.getElementById("graph").getContext("2d");
 const myChart = new Chart(ctx, {
@@ -145,18 +136,49 @@ const myChart = new Chart(ctx, {
 		],
 		datasets: [
 			{
-				label: "Temperatur",
-				data: [22.5, 19.4, 20.5, 21.2, 21.5, 21.3, 23.5, 22.6, 24.6, 21.4],
+				label: "Temperatur °C",
+				data: TempData,
 				backgroundColor: ["rgba(0, 91, 150, 0.4)"],
 				borderColor: ["rgba(0, 91, 150, 0.4)"],
 				borderWidth: 4,
+				yAxisID: "y",
+			},
+			{
+				label: "Luftfuktighet %",
+				data: HumData,
+				backgroundColor: ["rgba(255, 0, 0, 0.4)"],
+				borderColor: ["rgba(255, 0, 0, 0.4)"],
+				borderWidth: 4,
+				yAxisID: "procent",
 			},
 		],
 	},
 	options: {
+		responsive: true,
+		maintainAspectRatio: false,
 		scales: {
 			y: {
 				beginAtZero: true,
+				position: "left",
+				type: "linear",
+				ticks: {
+					callback: function (value, index, values) {
+						return `${value} °C`;
+					},
+				},
+			},
+			procent: {
+				beginAtZero: true,
+				position: "right",
+				type: "linear",
+				grid: {
+					drawOnChartArea: false,
+				},
+				ticks: {
+					callback: function (value, index, values) {
+						return `${value} %`;
+					},
+				},
 			},
 		},
 	},

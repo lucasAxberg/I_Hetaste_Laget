@@ -16,6 +16,8 @@ const firebaseConfig = {
 };
 
 let data;
+let currentTemp;
+let currentHum;
 
 firebase.initializeApp(firebaseConfig);
 const dataBase = firebase.database().ref("Arduino1/current");
@@ -24,4 +26,9 @@ dataBase.on("value", (snapshot) => {
 	console.log(data);
 	console.log(data["hum"]);
 	console.log(data["temp"]);
+
+	currentTemp = data["temp"];
+	currentHum = data["hum"];
+	document.getElementById("temp").innerHTML = `${currentTemp}°C`;
+	document.getElementById("humidity").innerHTML = `${currentHum}%`;
 });
