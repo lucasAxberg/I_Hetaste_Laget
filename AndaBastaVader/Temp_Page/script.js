@@ -1,42 +1,98 @@
-let weather = {
-	state: "rain",
-	// 	TemperatureCelcius: 18,
-	// 	humidity: 0,
-	// 	time: 0,
-	// 	timestate: "noon",
-	// 	season: "winter",
-};
+// let weather = {
+// 	state: "rain",
+// 	TemperatureCelcius: 18,
+// 	humidity: 0,
+// 	time: 0,
+// 	timestate: "noon",
+// 	season: "winter",
+// };
 
-let backgroundImages = {
-	normal: ["p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8"],
-	sunSetRise: ["sunrise1", "sunrise2", "sunrise3", "sunrise4"],
-	night: ["night1", "night2", "night3"],
-	rain: ["rain1", "rain2", "rain3"],
-	Thunder: ["Thunder1"],
-};
+// let backgroundImages = {
+// 	normal: ["p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8"],
+// 	sunSetRise: ["sunrise1", "sunrise2", "sunrise3", "sunrise4"],
+// 	night: ["night1", "night2", "night3"],
+// 	rain: ["rain1", "rain2", "rain3"],
+// 	Thunder: ["Thunder1"],
+// };
 
 // console.log(backgroundImages);
 
-function changebackgroundImage() {
-	let backgroundImageUrl = { start: "../images/omg/", ending: ".jpg" };
-	let random;
-	let ImmageUrl;
-	if (weather.state == "rain") {
-		random = Math.floor(Math.random() * 1);
+// function changebackgroundImage() {
+// 	let backgroundImageUrl = { start: "../images/omg/", ending: ".jpg" };
+// 	let random;
+// 	let ImmageUrl;
+// 	if (weather.state == "rain") {
+// 		random = Math.floor(Math.random() * 1);
 
-		ImageuUrl = backgroundImageUrl.start.concat(
-			backgroundImages.rain[random],
-			backgroundImageUrl.ending
-		);
-		console.log(ImageuUrl);
+// 		ImageuUrl = backgroundImageUrl.start.concat(
+// 			backgroundImages.rain[random],
+// 			backgroundImageUrl.ending
+// 		);
+// 		console.log(ImageuUrl);
 
-		document.getElementById("container").style.backgroundImage =
-			'url("../images/omg/p5.jpg")';
-	}
-	return;
-}
+// 		document.getElementById("container").style.backgroundImage =
+// 			'url("../images/omg/p5.jpg")';
+// 	}
+// 	return;
+// }
 
 // changebackgroundImage();
+let tempList = [
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+];
+let humList = [
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+];
+// Skapar 2 listor med 24 platser som sedan kommer att bytas ut till den timmens medeltemperatur
+
+let noZeroTemp = tempList;
+let noZeroHum = humList;
 
 function TempButtonFunction(obj) {
 	// alert(obj.id);
@@ -58,7 +114,7 @@ function TempButtonFunction(obj) {
 	console.log(currentTemp);
 }
 
-let TemperatureFarenheight = Math.round(weather.TemperatureCelcius * 1.8 + 32);
+// let TemperatureFarenheight = Math.round(weather.TemperatureCelcius * 1.8 + 32);
 
 function Convertion(obj) {
 	let temperature = document.getElementById("temp");
@@ -97,11 +153,6 @@ function openMenu() {
 	document.getElementById("stripe3").classList.toggle("change-stripe3");
 }
 
-let TempData = [22.5, 19.4, 20.5, 21.2, 21.5, 21.3, 23.5, 22.6, 24.6, 21.4];
-let HumData = [
-	46.2, 45.4, 44.5, 44.7, 45.2, 46.1, 46.4, 46.9, 47.1, 44.5, 78.3,
-];
-
 let maxY = 100;
 
 const ctx = document.getElementById("graph").getContext("2d");
@@ -109,6 +160,7 @@ const myChart = new Chart(ctx, {
 	type: "line",
 	data: {
 		labels: [
+			"00",
 			"01",
 			"02",
 			"03",
@@ -132,12 +184,11 @@ const myChart = new Chart(ctx, {
 			"21",
 			"22",
 			"23",
-			"24",
 		],
 		datasets: [
 			{
 				label: "Temperatur °C",
-				data: TempData,
+				data: tempList,
 				backgroundColor: ["rgba(0, 91, 150, 0.4)"],
 				borderColor: ["rgba(0, 91, 150, 0.4)"],
 				borderWidth: 4,
@@ -145,7 +196,7 @@ const myChart = new Chart(ctx, {
 			},
 			{
 				label: "Luftfuktighet %",
-				data: HumData,
+				data: humList,
 				backgroundColor: ["rgba(255, 0, 0, 0.4)"],
 				borderColor: ["rgba(255, 0, 0, 0.4)"],
 				borderWidth: 4,
@@ -169,6 +220,7 @@ const myChart = new Chart(ctx, {
 			},
 			procent: {
 				beginAtZero: true,
+				max: 100,
 				position: "right",
 				type: "linear",
 				grid: {

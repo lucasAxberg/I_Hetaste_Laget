@@ -1,3 +1,18 @@
+let months = [
+	"January",
+	"February",
+	"March",
+	"April",
+	"May",
+	"June",
+	"July",
+	"August",
+	"September",
+	"October",
+	"November",
+	"December",
+];
+
 const firebaseConfig = {
 	apiKey: "AIzaSyBWy9aiEcXbiuDK3gOnQ_4VWkc84OpoJXk",
 
@@ -18,17 +33,68 @@ const firebaseConfig = {
 let data;
 let currentTemp;
 let currentHum;
+let ArduinoList = ["Arduino1", "Arduino2", "Arduino3", "Arduino4", "Arduino5"];
+let displayedArduino = 0;
 
 firebase.initializeApp(firebaseConfig);
-const dataBase = firebase.database().ref("Arduino1/current");
+const dataBase = firebase.database().ref(ArduinoList[displayedArduino]);
 dataBase.on("value", (snapshot) => {
-	data = snapshot.val();
-	console.log(data);
-	console.log(data["hum"]);
-	console.log(data["temp"]);
+	// Koden körs varje gång databasen updaterar sig
 
-	currentTemp = data["temp"];
-	currentHum = data["hum"];
+	data = snapshot.val();
+	// Tar ut datan från databasen från den valda arduinon som ett objekt
+
+	console.log(data);
+	console.log(data["current"]["hum"]);
+	console.log(data["current"]["temp"]);
+
+	currentTemp = data["current"]["temp"];
+	currentHum = data["current"]["hum"];
+	// Tar de senaste värderna från databasen från den valda arduinon
+
 	document.getElementById("temp").innerHTML = `${currentTemp}°C`;
 	document.getElementById("humidity").innerHTML = `${currentHum}%`;
+	// Sätter in de senaste värderna i hemsidan
+
+	let d = new Date();
+	let currentMonth = months[d.getMonth()];
+	let currentDay = d.getDate();
+	let currentHour = d.getHours();
+	let todaysData = data["saved"][currentMonth][currentDay];
+	// Tar reda på vilken månad, dag och timme det är
+
+	let finishedHours = Object.keys(todaysData).length - 1;
+	// variabeln finishedHours är en int på hur många timmar som är färdigmätta
+
+	let todaysDataKeys = Object.keys(todaysData);
+	console.log(currentHour);
+	console.log(currentMonth);
+	console.log(Object.keys(todaysData).length);
+	console.log(finishedHours);
+
+	console.log(todaysData[todaysDataKeys[0]]);
+
+	for (let i = 0; i < finishedHours; i++) {
+		let tempSum = 0;
+		let humSum = 0;
+		// Skapar 2 variabler som ska innehålla summan av varje timmes värderna
+
+		let hourKeys = Object.keys(todaysData[todaysDataKeys[i]]);
+		for (let j = 0; j < hourKeys.length; j++) {
+			let hour = todaysDataKeys[i];
+			let minute = hourKeys[j];
+			tempSum += todaysData[hour][minute]["temp"];
+			humSum += todaysData[hour][minute]["hum"];
+		}
+		// Loopar igenom all data under en timme och adderar ihop allt i tempSum och humSum
+
+		tempList[todaysDataKeys[i]] =
+			Math.round((tempSum / (hourKeys.length - 1)) * 10) / 10;
+		humList[todaysDataKeys[i]] =
+			Math.round((humSum / (hourKeys.length - 1)) * 10) / 10;
+		// Ränkar ut medelvärdet till en decimal av de avslutade timmarna och lägger till de på rätt plats i listan
+	}
+	console.log(tempList);
+	myChart.update();
+	// Updaterar grafen med de nya värderna
 });
