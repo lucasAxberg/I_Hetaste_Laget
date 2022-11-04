@@ -33,16 +33,21 @@ const firebaseConfig = {
 let data;
 let currentTemp;
 let currentHum;
-let ArduinoList = ["Arduino1", "Arduino2", "Arduino3", "Arduino4", "Arduino5"];
+let ArduinoList = ["Arduino3", "Arduino5", "Arduino1", "Arduino2", "Arduino4"];
 let displayedArduino = 0;
 
 firebase.initializeApp(firebaseConfig);
-const dataBase = firebase.database().ref(ArduinoList[displayedArduino]);
+
+let dataBase = firebase.database().ref();
 dataBase.on("value", (snapshot) => {
 	// Koden körs varje gång databasen updaterar sig
 
-	data = snapshot.val();
+	let dataObj = snapshot.val();
+	console.log(dataObj);
 	// Tar ut datan från databasen från den valda arduinon som ett objekt
+
+	data = dataObj[ArduinoList[displayedArduino]];
+	// Väljer vilken arduino som datan ska läsas in från
 
 	console.log(data);
 	console.log(data["current"]["hum"]);

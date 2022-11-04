@@ -116,6 +116,44 @@ function TempButtonFunction(obj) {
 
 // let TemperatureFarenheight = Math.round(weather.TemperatureCelcius * 1.8 + 32);
 
+function toggleArd(obj) {
+	console.log(obj.id);
+
+	const parent = obj.parentElement;
+	console.log(parent);
+	const child = parent.children;
+	for (var i = 0; i < child.length; i++) {
+		if (child[i].classList.contains("active")) {
+			if (child[i] == obj) {
+				return;
+			}
+			child[i].classList.remove("active");
+		}
+	}
+	obj.classList.add("active");
+	let id = obj.id;
+	console.log(id);
+
+	switch (id) {
+		case "1":
+			displayedArduino = 0;
+			break;
+		case "2":
+			displayedArduino = 1;
+			break;
+		case "3":
+			displayedArduino = 2;
+			break;
+		case "4":
+			displayedArduino = 3;
+			break;
+	}
+
+	firebase.database().ref("updater").set({
+		val: displayedArduino,
+	});
+}
+
 function Convertion(obj) {
 	let temperature = document.getElementById("temp");
 	if (obj.id == "F") {
