@@ -114,7 +114,7 @@ body {
   height: calc(100vh - max(6vh, 65px));
   margin-top: max(6vh, 65px);
   align-items: center;
-  background-color: #b3cde0;
+  
 }
 
 #left-container {
@@ -152,8 +152,11 @@ body {
 }
 
 #right-container {
+	border-radius: 20px;
 	width: 75vw;
 	height: 90%;
+	background-color: #8cbbdcd3;
+	
 }
 
 #bottom-container {
