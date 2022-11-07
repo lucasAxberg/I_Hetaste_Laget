@@ -24,6 +24,7 @@ body {
 	position: fixed;
 	justify-content: start;
 	z-index: 2;
+	
 }
 
 .menubutton {
@@ -57,7 +58,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	font-family: oswaldregular;
-	font-size: 5vh;
+	font-size: 2.5em;
 	color: white;
 }
 
@@ -105,4 +106,45 @@ body {
 
 .change-stripe3 {
 	transform: translate(0, -12.5px) rotate(45deg);
+}
+
+.container {
+	display: flex;
+	top: 100px;
+	width: 100%;
+	height: 100vh;
+	background-image: url("../Images/omg/P4.jpg");
+	justify-content: center;
+}
+
+.contentbox {
+	padding-right: 100px;
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 80%;
+	display: flex;
+	padding: 30px;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 5px 5px 2px rgb(66, 89, 97);
+	
+}
+
+.content {
+	background-color: rgba(92, 168, 219, 0.492);
+	border-radius: 30px;
+	padding: 30px;
+	width: 90%;
+	font-size: 1.5em;
+	font-family: oswaldregular;
+	box-shadow: 5px 5px 2px rgb(66, 89, 97);
+	color: white;
+
+}
+
+
+.heading {
+	padding: 30px;
+	color: white;
+	font-family: oswaldregular;
+	font-size: 3em;
 }
