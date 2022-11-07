@@ -11,8 +11,12 @@
 body {
 	margin: 0;
 	display: flex;
-	background-color: #b3cde0;
+
 	flex-direction: column;
+	background-image: url("../Images/omg/P4.jpg");
+	height: 100%;
+	background-attachment: fixed;
+	background-position: fixed;
 }
 
 .navbar {
@@ -113,7 +117,6 @@ body {
 	top: 100px;
 	width: 100%;
 	height: 100vh;
-	background-image: url("../Images/omg/P4.jpg");
 	justify-content: center;
 }
 
@@ -122,23 +125,26 @@ body {
 	background-color: rgba(0, 0, 0, 0.6);
 	width: 80%;
 	display: flex;
-	padding: 30px;
+	padding: 20px;
 	align-items: center;
 	flex-direction: column;
 	box-shadow: 5px 5px 2px rgb(66, 89, 97);
+	height: 1000%;
 	
 }
 
 .content {
 	background-color: rgba(92, 168, 219, 0.492);
+	margin: 20px;
 	border-radius: 30px;
-	padding: 30px;
+	padding: 20px;
 	width: 90%;
 	font-size: 1.5em;
 	font-family: oswaldregular;
 	box-shadow: 5px 5px 2px rgb(66, 89, 97);
 	color: white;
-
+	line-height: 1.8;
+	letter-spacing: 0.8px;
 }
 
 
@@ -147,4 +153,48 @@ body {
 	color: white;
 	font-family: oswaldregular;
 	font-size: 3em;
+}
+
+.personalBox {
+	background-color: rgba(92, 168, 219, 0.492);
+
+	margin: 20px;
+	border-radius: 30px;
+	padding: 20px;
+	width: 43%;
+	font-size: 1.5em;
+	font-family: oswaldregular;
+	box-shadow: 5px 5px 2px rgb(66, 89, 97);
+	color: white;
+	line-height: 1.8;
+	letter-spacing: 0.8px;
+}
+
+.personalBoxes {
+	display: flex;
+	background-color: rgba(255, 255, 255, 0.079);
+	flex-wrap: wrap;
+	border-radius: 100px;
+	width: 100%;
+	justify-content: center;
+}
+
+#seb{
+	
+}
+
+#luce{
+
+}
+
+#will{
+
+}
+
+#fell{
+
+}
+
+#lov{
+
 }
