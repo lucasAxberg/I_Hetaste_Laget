@@ -90,7 +90,6 @@ let humList = [
 	null,
 ];
 // Skapar 2 listor med 24 platser som sedan kommer att bytas ut till den timmens medeltemperatur
-
 let noZeroTemp = tempList;
 let noZeroHum = humList;
 
@@ -159,6 +158,12 @@ function Convertion(obj) {
 	if (obj.id == "F") {
 		let farenheitTemp = Math.round((currentTemp * 1.8 + 32) * 10) / 10;
 		temperature.innerHTML = `${farenheitTemp}°F`;
+		// for (let i = 0; i < tempList.length; i++) {
+		// 	if (tempList[i]) {
+		// 		tempList[i] = Math.round((tempList[i] * 1.8 + 32) * 10) / 10;
+		// 	}
+		// }
+		myChart.update();
 		// Converts the temp to farenheit from celsius with 1 decimal point
 	} else if (obj.id == "C") {
 		temperature.innerHTML = `${currentTemp}°C`;
