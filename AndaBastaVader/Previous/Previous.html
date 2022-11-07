@@ -5,6 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="Previous.css" />
+		<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 		<title>Document</title>
 	</head>
 	<body>
@@ -24,6 +27,21 @@
 			<a href="../Previous/Previous.html" class="menuItem">Tidigare</a>
 			<a href="../About_Us/About_Us.html" class="menuItem">Om Oss</a>
 		</div>
+		<div id="main-container">
+			<div id="left-container">
+				<div id="1" class="daySelector">November 1</div>
+				<div id="2" class="daySelector">Day 2</div>
+				<div id="3" class="daySelector">Day 3</div>
+				<div id="4" class="daySelector">Day 4</div>
+				<div id="5" class="daySelector">Day 5</div>
+				<div id="6" class="daySelector">Day 6</div>
+				<div id="7" class="daySelector">Day 7</div>
+			</div>
+			<div id="right-container">
+				<canvas id="myCanvas"></canvas>
+			</div>
+		</div>
+
 		<script src="Previous_Script.js"></script>
 	</body>
 </html>
