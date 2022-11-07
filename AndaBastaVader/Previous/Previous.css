@@ -13,6 +13,8 @@ body {
 	display: flex;
 	background-color: rgb(5, 210, 246);
 	flex-direction: column;
+	background-image: url("../Images/omg/rain2.jpg");
+	background-size: cover;
 }
 
 .navbar {
@@ -122,6 +124,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
+	
 }
 
 .daySelector {
@@ -143,4 +146,6 @@ body {
 #right-container {
 	width: 75vw;
 	height: 90%;
+	background-color: rgba(78, 179, 184, 0.562);
+	border-radius: 30px;
 }
