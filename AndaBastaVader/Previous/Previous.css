@@ -1,151 +1,190 @@
 @font-face {
-	font-family: "oswaldregular";
-	src: url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
-			format("woff2"),
-		url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
-			format("woff");
-	font-weight: normal;
-	font-style: normal;
+  font-family: "oswaldregular";
+  src: url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
+      format("woff2"),
+    url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-	margin: 0;
-	display: flex;
-	background-color: rgb(5, 210, 246);
-	flex-direction: column;
+  margin: 0;
+  display: flex;
+  background-color: #b3cde0;
+  flex-direction: column;
 	background-image: url("../Images/omg/rain2.jpg");
 	background-size: cover;
 }
 
 .navbar {
-	display: flex;
-	background-color: rgb(52, 52, 52);
-	height: 6vh;
-	min-height: 65px;
-	width: 100%;
-	position: fixed;
-	justify-content: start;
-	z-index: 2;
+  display: flex;
+  background-color: rgb(52, 52, 52);
+  height: 6vh;
+  min-height: 65px;
+  width: 100%;
+  position: fixed;
+  justify-content: start;
+  z-index: 2;
 }
 
 .menubutton {
-	background-color: rgb(35, 35, 35);
-	height: calc(100% - 34px);
-	width: max(6vh, 65px);
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	padding-top: 17px;
-	padding-bottom: 17px;
-	transition: 0.4s;
+  background-color: rgb(35, 35, 35);
+  height: calc(100% - 34px);
+  width: max(6vh, 65px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  transition: 0.4s;
 }
 
 .menubutton:hover {
-	background-color: darkgrey;
+  background-color: darkgrey;
 }
 
 .menu-stripe {
-	width: 60%;
-	height: max(0.75vh, 6px);
-	background-color: white;
-	border-radius: 1000px;
+  width: 60%;
+  height: max(0.75vh, 6px);
+  background-color: white;
+  border-radius: 1000px;
 }
 
 .title-container {
-	width: calc(100% - (2 * max(6vh, 65px)));
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: oswaldregular;
-	font-size: 5vh;
-	color: white;
+  width: calc(100% - (2 * max(6vh, 65px)));
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: oswaldregular;
+  font-size: 5vh;
+  color: white;
 }
 
 #sideMenu {
-	margin-top: max(6vh, 65px);
-	height: 40vh;
-	width: 15vw;
-	z-index: 2;
-	position: fixed;
-	background-color: #333;
-	display: flex;
-	flex-direction: column;
-	justify-content: start;
+  margin-top: max(6vh, 65px);
+  height: 40vh;
+  width: 15vw;
+  z-index: 2;
+  position: fixed;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 
 .menuItem {
-	height: 25%;
-	color: white;
-	width: 100%;
-	font-family: oswaldregular;
-	font-size: 3vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-decoration: none;
-	-webkit-user-select: none;
-	user-select: none;
+  height: 25%;
+  color: white;
+  width: 100%;
+  font-family: oswaldregular;
+  font-size: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .menuItem:hover {
-	background-color: #555;
+  background-color: #555;
 }
 
 .toTheSide {
-	margin-left: -100vh;
+  margin-left: -100vh;
 }
 
 .change-stripe1 {
-	transform: translate(0, 12.5px) rotate(-45deg);
+  transform: translate(0, calc(max(0.75vh, 6px) * 1.735)) rotate(-45deg);
 }
 
 .change-stripe2 {
-	opacity: 0;
+  opacity: 0;
 }
 
 .change-stripe3 {
-	transform: translate(0, -12.5px) rotate(45deg);
+  transform: translate(0, calc(max(0.75vh, 6px) * -1.735)) rotate(45deg);
 }
 
 #main-container {
-	display: flex;
-	height: calc(100vh - max(6vh, 65px));
-	margin-top: max(6vh, 65px);
-	align-items: center;
+  display: flex;
+  height: calc(100vh - max(6vh, 65px));
+  margin-top: max(6vh, 65px);
+  align-items: center;
+  background-color: #b3cde0;
 }
 
 #left-container {
-	height: 90%;
-	width: 25vw;
-	/* background-color: #333; */
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
+  height: 90%;
+  width: 25vw;
+  /* background-color: #333; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 	
 }
 
 .daySelector {
-	height: 10%;
-	width: 75%;
-	background-color: #fff;
-	border-radius: 0.75rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: oswaldregular;
-	font-size: 1.5em;
+  height: 10%;
+  width: 75%;
+  background-color: #6497b1;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: oswaldregular;
+  font-size: min(2vw, 5vh);
+  transition: 0.2s;
+}
+
+.daySelector:hover {
+  background-color: #5fbceb;
+  transform: translate(-0.25vh, -0.5vw);
 }
 
 .hidden {
-	opacity: 0;
+  opacity: 0;
+  margin-right: 100vw;
 }
 
 #right-container {
 	width: 75vw;
 	height: 90%;
-	background-color: rgba(78, 179, 184, 0.562);
-	border-radius: 30px;
+}
+
+#bottom-container {
+  padding-bottom: 5vh;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+}
+
+#selector {
+  background-color: #6497b1;
+  display: flex;
+  height: 7vh;
+  width: 50vw;
+  border-radius: 0.75vh;
+  border: 0.35vh solid black;
+}
+
+.buttons {
+  display: flex;
+  /* background-color: blue; */
+  width: 25%;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vh;
+  font-family: oswaldregular;
+  border-radius: 0.75vh;
+  user-select: none;
+}
+
+.active {
+  background-color: #5fbceb;
 }
