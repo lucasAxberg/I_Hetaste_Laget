@@ -28,6 +28,7 @@ body {
 	position: fixed;
 	justify-content: start;
 	z-index: 2;
+	opacity: 0.9;
 	
 }
 
@@ -156,7 +157,7 @@ body {
 }
 
 .personalBox {
-	background-color: rgba(92, 168, 219, 0.492);
+	background-color: rgba(92, 219, 170, 0.492);
 
 	margin: 20px;
 	border-radius: 30px;
@@ -179,22 +180,8 @@ body {
 	justify-content: center;
 }
 
-#seb{
-	
-}
-
-#luce{
-
-}
-
-#will{
-
-}
-
-#fell{
-
-}
-
-#lov{
-
+groupPicture {
+	background-color: blue;
+	width: 100%;
+	height: 100%;
 }
