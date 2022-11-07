@@ -94,9 +94,9 @@ dataBase.on("value", (snapshot) => {
 		// Loopar igenom all data under en timme och adderar ihop allt i tempSum och humSum
 
 		tempList[todaysDataKeys[i]] =
-			Math.round((tempSum / (hourKeys.length - 1)) * 10) / 10;
+			Math.round((tempSum / hourKeys.length) * 10) / 10;
 		humList[todaysDataKeys[i]] =
-			Math.round((humSum / (hourKeys.length - 1)) * 10) / 10;
+			Math.round((humSum / hourKeys.length) * 10) / 10;
 		// Ränkar ut medelvärdet till en decimal av de avslutade timmarna och lägger till de på rätt plats i listan
 	}
 	console.log(tempList);

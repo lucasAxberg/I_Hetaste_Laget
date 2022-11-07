@@ -198,7 +198,6 @@ const myChart = new Chart(ctx, {
 	type: "line",
 	data: {
 		labels: [
-			"00",
 			"01",
 			"02",
 			"03",
@@ -222,6 +221,7 @@ const myChart = new Chart(ctx, {
 			"21",
 			"22",
 			"23",
+			"24",
 		],
 		datasets: [
 			{
@@ -248,6 +248,7 @@ const myChart = new Chart(ctx, {
 		scales: {
 			y: {
 				beginAtZero: true,
+				max: 30,
 				position: "left",
 				type: "linear",
 				ticks: {
