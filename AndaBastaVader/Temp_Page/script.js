@@ -121,6 +121,13 @@ function toggleArd(obj) {
 		document.getElementById("C").classList.add("active");
 	}
 
+	for (let i = 0; i < tempList.length; i++) {
+		tempList[i] = null;
+	}
+	for (let i = 0; i < humList.length; i++) {
+		humList[i] = null;
+	}
+
 	const parent = obj.parentElement;
 	console.log(parent);
 	const child = parent.children;

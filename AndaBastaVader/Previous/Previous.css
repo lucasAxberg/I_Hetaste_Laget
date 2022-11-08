@@ -112,7 +112,7 @@ body {
 
 #main-container {
 	display: flex;
-	height: calc(100vh - max(6vh, 65px));
+	height: calc(90vh - max(6vh, 65px));
 	margin-top: max(6vh, 65px);
 	align-items: center;
 }
@@ -159,8 +159,9 @@ body {
 }
 
 #bottom-container {
-	padding-bottom: 5vh;
+	height: 5vh;
 	width: 100%;
+	padding-bottom: 5vh;
 	/* background-color: red; */
 	display: flex;
 	justify-content: center;
