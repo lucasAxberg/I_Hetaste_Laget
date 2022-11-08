@@ -180,15 +180,11 @@ dataBase.on("value", (snapshot) => {
 	// Koden körs varje gång databasen updaterar sig
 
 	let dataObj = snapshot.val();
-	console.log(dataObj);
+
 	// Tar ut datan från databasen från den valda arduinon som ett objekt
 
 	data = dataObj[ArduinoList[displayedArduino]];
 	// Väljer vilken arduino som datan ska läsas in från
-
-	console.log(data);
-	console.log(data["current"]["hum"]);
-	console.log(data["current"]["temp"]);
 
 	currentTemp = data["current"]["temp"];
 	currentHum = data["current"]["hum"];
@@ -202,7 +198,6 @@ dataBase.on("value", (snapshot) => {
 
 	let allDays = Object.keys(data["saved"][currentMonth]);
 	let usableDays = [];
-	console.log(allDays);
 	if (allDays.length - 1 > 0) {
 		if (allDays.length - 1 > 7) {
 			for (let i = allDays.length - 8; i < allDays.length - 1; i++) {
@@ -225,7 +220,6 @@ dataBase.on("value", (snapshot) => {
 		if (usableDays[i] != null) {
 			// Kollar om det finns något eller är null
 			document.getElementById(i).innerHTML = `${currentMonth} ${usableDays[i]}`;
-			console.log(usableDays[i]);
 			if (document.getElementById(i).classList.contains("hidden")) {
 				document.getElementById(i).classList.remove("hidden");
 			}
@@ -236,9 +230,11 @@ dataBase.on("value", (snapshot) => {
 	}
 
 	let todaysData = data["saved"][currentMonth][usableDays[dayToShow]];
+	console.log(todaysData);
 	//   tar ut datan från den valda dagen
 
-	let finishedHours = Object.keys(todaysData).length - 1;
+	let Hours = Object.keys(todaysData);
+	let finishedHours = Hours.length - 1;
 	// variabeln finishedHours är en int på hur många timmar som är färdigmätta
 
 	let todaysDataKeys = Object.keys(todaysData);
@@ -263,7 +259,6 @@ dataBase.on("value", (snapshot) => {
 			Math.round((humSum / hourKeys.length) * 10) / 10;
 		// Ränkar ut medelvärdet till en decimal av de avslutade timmarna och lägger till de på rätt plats i listan
 	}
-	console.log(tempList);
 	myChart.update();
 	// Updaterar grafen med de nya värderna
 });
@@ -309,6 +304,57 @@ function toggleActive(obj) {
 	let id = obj.id;
 	obj.classList.add("active");
 	// Tar bort klassen active från den som hade den tidigare och ger den till den som blev klickad på
+
+	switch (id) {
+		case "11":
+			displayedArduino = 0;
+			break;
+		case "12":
+			displayedArduino = 1;
+			break;
+		case "13":
+			displayedArduino = 2;
+			break;
+		case "14":
+			displayedArduino = 4;
+			break;
+	}
+	// Byter vilken arduino som datan ska läsas från
+
+	for (let i = 0; i < tempList.length; i++) {
+		tempList[i] = null;
+	}
+	for (let i = 0; i < humList.length; i++) {
+		humList[i] = null;
+	}
+	//   Rensar listorna
+
+	firebase.database().ref("updater").set({
+		val: displayedArduino,
+	});
+
+	let hidden = true;
+	let currentActive = document.getElementsByClassName("activeDay")[0];
+	console.log(currentActive);
+	console.log(currentActive.id);
+
+	currentActive.classList.remove("activeDay");
+	let Id = currentActive.id;
+	console.log(document.getElementById(Id).classList.contains("hidden"));
+	while (hidden) {
+		if (document.getElementById(Id).classList.contains("hidden")) {
+			Id = Id - 1;
+			continue;
+		} else {
+			dayToShow = Id;
+			console.log(dayToShow);
+			document.getElementById(Id).classList.add("activeDay");
+			hidden = false;
+			firebase.database().ref("updater").set({
+				val: dayToShow,
+			});
+		}
+	}
 
 	switch (id) {
 		case "11":
