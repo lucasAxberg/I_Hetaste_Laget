@@ -190,3 +190,7 @@ body {
 .active {
 	background-color: #5fbceb;
 }
+
+.activeDay {
+	border: 5px solid black;
+}

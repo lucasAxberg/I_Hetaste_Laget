@@ -50,6 +50,7 @@ let humList = [
 	null,
 	null,
 ];
+// Skapar 2 listor med 24 platser som kommer att fyllas med den timmens medelvärde
 
 const ctx = document.getElementById("myCanvas").getContext("2d");
 const myChart = new Chart(ctx, {
@@ -225,6 +226,9 @@ dataBase.on("value", (snapshot) => {
 			// Kollar om det finns något eller är null
 			document.getElementById(i).innerHTML = `${currentMonth} ${usableDays[i]}`;
 			console.log(usableDays[i]);
+			if (document.getElementById(i).classList.contains("hidden")) {
+				document.getElementById(i).classList.remove("hidden");
+			}
 			// Updaterar texten på knapparna
 		} else {
 			document.getElementById(i).classList.add("hidden");
@@ -238,12 +242,6 @@ dataBase.on("value", (snapshot) => {
 	// variabeln finishedHours är en int på hur många timmar som är färdigmätta
 
 	let todaysDataKeys = Object.keys(todaysData);
-	console.log(currentHour);
-	console.log(currentMonth);
-	console.log(Object.keys(todaysData).length);
-	console.log(finishedHours);
-
-	console.log(todaysData[todaysDataKeys[0]]);
 
 	for (let i = 0; i < finishedHours; i++) {
 		let tempSum = 0;
@@ -276,8 +274,10 @@ function openMenu() {
 	document.getElementById("stripe2").classList.toggle("change-stripe2");
 	document.getElementById("stripe3").classList.toggle("change-stripe3");
 }
+// Visar menyn och justerar menubuttons utseende
 
 function changeDay(obj) {
+	toggleActiveDay(obj);
 	let dayIndex = obj.id;
 	dayToShow = dayIndex;
 	//   Ändrar vilken dag som ska läsas in
@@ -308,6 +308,8 @@ function toggleActive(obj) {
 	}
 	let id = obj.id;
 	obj.classList.add("active");
+	// Tar bort klassen active från den som hade den tidigare och ger den till den som blev klickad på
+
 	switch (id) {
 		case "11":
 			displayedArduino = 0;
@@ -322,8 +324,33 @@ function toggleActive(obj) {
 			displayedArduino = 4;
 			break;
 	}
+	// Byter vilken arduino som datan ska läsas från
+
+	for (let i = 0; i < tempList.length; i++) {
+		tempList[i] = null;
+	}
+	for (let i = 0; i < humList.length; i++) {
+		humList[i] = null;
+	}
+	//   Rensar listorna
 
 	firebase.database().ref("updater").set({
 		val: displayedArduino,
 	});
+	// Updaterar ett värde på databasen för att läsa in det senaste värdet
 }
+
+function toggleActiveDay(obj) {
+	let parent = obj.parentElement;
+	let child = parent.children;
+	for (let i = 0; i < child.length; i++) {
+		if (child[i].classList.contains("activeDay")) {
+			if (child[i] == obj) {
+				return;
+			}
+			child[i].classList.remove("activeDay");
+		}
+	}
+	obj.classList.add("activeDay");
+}
+//

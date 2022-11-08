@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Previous.css" />
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="menubutton" onclick="openMenu()">
-        <div class="menu-stripe" id="stripe1"></div>
-        <div class="menu-stripe" id="stripe2"></div>
-        <div class="menu-stripe" id="stripe3"></div>
-      </div>
-      <div class="title-container">
-        <div class="title">Tidigare Temperatur</div>
-      </div>
-    </div>
-    <div class="toTheSide" id="sideMenu">
-      <a href="../Main_Menu/Main_Menu.html" class="menuItem">Hem</a>
-      <a href="../Temp_Page/Temp_Page.html" class="menuItem">Temperatur</a>
-      <a href="../Previous/Previous.html" class="menuItem">Tidigare</a>
-      <a href="../About_Us/About_Us.html" class="menuItem">Om Oss</a>
-    </div>
-    <div id="main-container">
-      <div id="left-container">
-        <div id="0" class="daySelector" onclick="changeDay(this)">Day 1</div>
-        <div id="1" class="daySelector" onclick="changeDay(this)">Day 2</div>
-        <div id="2" class="daySelector" onclick="changeDay(this)">Day 3</div>
-        <div id="3" class="daySelector" onclick="changeDay(this)">Day 4</div>
-        <div id="4" class="daySelector" onclick="changeDay(this)">Day 5</div>
-        <div id="5" class="daySelector" onclick="changeDay(this)">Day 6</div>
-        <div id="6" class="daySelector" onclick="changeDay(this)">Day 7</div>
-      </div>
-      <div id="right-container">
-        <canvas id="myCanvas"></canvas>
-      </div>
-    </div>
-    <div id="bottom-container">
-      <div id="selector">
-        <div id="11" class="buttons active" onclick="toggleActive(this)">
-          Klassrummet
-        </div>
-        <div id="12" class="buttons" onclick="toggleActive(this)">
-          Terrariet
-        </div>
-        <div id="13" class="buttons" onclick="toggleActive(this)">
-          Vardagsrummet
-        </div>
-        <div id="14" class="buttons" onclick="toggleActive(this)">Utomhus</div>
-      </div>
-    </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="Previous.css" />
+		<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="menubutton" onclick="openMenu()">
+				<div class="menu-stripe" id="stripe1"></div>
+				<div class="menu-stripe" id="stripe2"></div>
+				<div class="menu-stripe" id="stripe3"></div>
+			</div>
+			<div class="title-container">
+				<div class="title">Tidigare Temperatur</div>
+			</div>
+		</div>
+		<div class="toTheSide" id="sideMenu">
+			<a href="../Main_Menu/Main_Menu.html" class="menuItem">Hem</a>
+			<a href="../Temp_Page/Temp_Page.html" class="menuItem">Temperatur</a>
+			<a href="../Previous/Previous.html" class="menuItem">Tidigare</a>
+			<a href="../About_Us/About_Us.html" class="menuItem">Om Oss</a>
+		</div>
+		<div id="main-container">
+			<div id="left-container">
+				<div id="0" class="daySelector activeDay" onclick="changeDay(this)">
+					Day 1
+				</div>
+				<div id="1" class="daySelector" onclick="changeDay(this)">Day 2</div>
+				<div id="2" class="daySelector" onclick="changeDay(this)">Day 3</div>
+				<div id="3" class="daySelector" onclick="changeDay(this)">Day 4</div>
+				<div id="4" class="daySelector" onclick="changeDay(this)">Day 5</div>
+				<div id="5" class="daySelector" onclick="changeDay(this)">Day 6</div>
+				<div id="6" class="daySelector" onclick="changeDay(this)">Day 7</div>
+			</div>
+			<div id="right-container">
+				<canvas id="myCanvas"></canvas>
+			</div>
+		</div>
+		<div id="bottom-container">
+			<div id="selector">
+				<div id="11" class="buttons active" onclick="toggleActive(this)">
+					Klassrummet
+				</div>
+				<div id="12" class="buttons" onclick="toggleActive(this)">
+					Terrariet
+				</div>
+				<div id="13" class="buttons" onclick="toggleActive(this)">
+					Vardagsrummet
+				</div>
+				<div id="14" class="buttons" onclick="toggleActive(this)">Utomhus</div>
+			</div>
+		</div>
 
-    <script src="Previous_Script.js"></script>
-  </body>
+		<script src="Previous_Script.js"></script>
+	</body>
 </html>
