@@ -116,6 +116,10 @@ function TempButtonFunction(obj) {
 
 function toggleArd(obj) {
 	console.log(obj.id);
+	if (document.getElementById("F").classList.contains("active")) {
+		document.getElementById("F").classList.remove("active");
+		document.getElementById("C").classList.add("active");
+	}
 
 	const parent = obj.parentElement;
 	console.log(parent);
