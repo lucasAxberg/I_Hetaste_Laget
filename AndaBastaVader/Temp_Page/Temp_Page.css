@@ -205,7 +205,7 @@ body {
 	align-items: center;
 	-webkit-user-select: none;
 	user-select: none;
-	font-size: min(5vh, 8vw);
+	font-size: min(5vh, 2vw);
 	font-family: oswaldregular;
 }
 
@@ -230,21 +230,18 @@ body {
 	box-shadow: 0, -0.5vh, 2vh #333;
 }
 
-#timeBox { 
+#timeBox {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    border-radius: 20px; 
-    background-color: #6497b177; 
-    padding: 1vw; 
+	border-radius: 20px;
+	background-color: #6497b177;
+	padding: 1vw;
+}
 
-} 
-
-#time { 
-	
-    font-family: oswaldregular; 
-    font-size: min(5vh, 5vw); 
-    color: white; 
-    letter-spacing: 4px; 
-
-} 
+#time {
+	font-family: oswaldregular;
+	font-size: min(5vh, 5vw);
+	color: white;
+	letter-spacing: 4px;
+}
