@@ -29,7 +29,6 @@ body {
 	position: fixed;
 	justify-content: start;
 	z-index: 2;
-	opacity: 0.9;
 	
 }
 
@@ -153,7 +152,11 @@ body {
 
 
 .heading {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 	padding: 30px;
+	margin: 20px;
 	color: white;
 	font-family: oswaldregular;
 	font-size: 3.4em;
@@ -203,10 +206,11 @@ body {
 	background-repeat: no-repeat;
 	border-radius: 40px;
 	background-size: cover;
-	opacity: 0.7;
+
 }
 
 .profilePic {
+	display: flex;
 	margin: 10px;
 	border-radius: 20px;
 	display: flex;
