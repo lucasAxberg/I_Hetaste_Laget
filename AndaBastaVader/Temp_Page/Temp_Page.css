@@ -1,231 +1,231 @@
 @font-face {
-  font-family: "oswaldregular";
-  src: url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
-      format("woff2"),
-    url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
-      format("woff");
-  font-weight: normal;
-  font-style: normal;
+	font-family: "oswaldregular";
+	src: url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff2")
+			format("woff2"),
+		url("../webfontkit-Oswald/oswald-variablefont_wght-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  background-color: rgb(5, 210, 246);
-  flex-direction: column;
-  overflow-x: hidden;
+	margin: 0;
+	display: flex;
+	background-color: rgb(5, 210, 246);
+	flex-direction: column;
+	overflow-x: hidden;
 }
 
 .navbar {
-  display: flex;
-  background-color: rgb(52, 52, 52);
-  height: 6vh;
-  min-height: 65px;
-  width: 100%;
-  position: fixed;
-  justify-content: start;
-  z-index: 2;
+	display: flex;
+	background-color: rgb(52, 52, 52);
+	height: 6vh;
+	min-height: 65px;
+	width: 100%;
+	position: fixed;
+	justify-content: start;
+	z-index: 2;
 }
 
 .menubutton {
-  background-color: rgb(35, 35, 35);
-  height: calc(100% - 34px);
-  width: max(6vh, 65px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 17px;
-  padding-bottom: 17px;
-  transition: 0.4s;
+	background-color: rgb(35, 35, 35);
+	height: calc(100% - 34px);
+	width: max(6vh, 65px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	transition: 0.4s;
 }
 
 .menubutton:hover {
-  background-color: darkgrey;
+	background-color: darkgrey;
 }
 
 .menu-stripe {
-  width: 60%;
-  height: max(0.75vh, 6px);
-  background-color: white;
-  border-radius: 1000px;
+	width: 60%;
+	height: max(0.75vh, 6px);
+	background-color: white;
+	border-radius: 1000px;
 }
 
 .title-container {
-  width: calc(100% - (2 * max(6vh, 65px)));
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: oswaldregular;
-  font-size: 5vh;
-  color: white;
+	width: calc(100% - (2 * max(6vh, 65px)));
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: oswaldregular;
+	font-size: 5vh;
+	color: white;
 }
 
 #sideMenu {
-  margin-top: max(6vh, 65px);
-  height: 40vh;
-  width: 15vw;
-  z-index: 2;
-  position: fixed;
-  background-color: #333;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
+	margin-top: max(6vh, 65px);
+	height: 40vh;
+	width: 15vw;
+	z-index: 2;
+	position: fixed;
+	background-color: #333;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
 }
 
 .menuItem {
-  height: 25%;
-  color: white;
-  width: 100%;
-  font-family: oswaldregular;
-  font-size: 3vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  -webkit-user-select: none;
-  user-select: none;
+	height: 25%;
+	color: white;
+	width: 100%;
+	font-family: oswaldregular;
+	font-size: 3vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 .menuItem:hover {
-  background-color: #555;
+	background-color: #555;
 }
 
 .toTheSide {
-  margin-left: -100vh;
+	margin-left: -100vh;
 }
 
 .change-stripe1 {
-  transform: translate(0, 12.5px) rotate(-45deg);
+	transform: translate(0, 12.5px) rotate(-45deg);
 }
 
 .change-stripe2 {
-  opacity: 0;
+	opacity: 0;
 }
 
 .change-stripe3 {
-  transform: translate(0, -12.5px) rotate(45deg);
+	transform: translate(0, -12.5px) rotate(45deg);
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: max(6vh, 65px);
-  height: 100vh;
-  width: 100vw;
-  padding-bottom: max(6vh, 65px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: max(6vh, 65px);
+	height: 100vh;
+	width: 100vw;
+	padding-bottom: max(6vh, 65px);
 
-  background-image: url(../Images/omg/P5.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: fixed;
-  background-attachment: fixed;
+	background-image: url(../Images/omg/P5.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: fixed;
+	background-attachment: fixed;
 }
 
 .selectA {
-  display: flex;
-  width: 50vw;
-  height: 7vh;
-  background-color: rgb(38, 85, 97);
-  border-radius: 10px;
-  border: 3px solid #333;
+	display: flex;
+	width: 50vw;
+	height: 7vh;
+	background-color: rgb(55, 114, 129);
+	border-radius: 10px;
+	border: 3px solid #333;
 }
 
 .display-container {
-  width: 25vw;
-  height: 60%;
-  /* background-color: red; */
+	width: 25vw;
+	height: 60%;
+	/* background-color: red; */
 }
 .display {
-  background-color: white;
-  opacity: 0.8;
-  width: 100%;
-  height: 70%;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: oswaldregular;
-  font-weight: 600;
-  /* background-color: orange; */
-  margin-top: -5vh;
+	background-color: white;
+	opacity: 0.8;
+	width: 100%;
+	height: 70%;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: oswaldregular;
+	font-weight: 600;
+	/* background-color: orange; */
+	margin-top: -5vh;
 }
 
 #temp {
-  font-size: 75px;
-  margin-bottom: 10px;
+	font-size: 75px;
+	margin-bottom: 10px;
 }
 
 #humidity {
-  font-size: 35px;
+	font-size: 35px;
 }
 
 .temp-button-container {
-  height: 14vh;
-  /* background-color: black; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	height: 14vh;
+	/* background-color: black; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .temp-button {
-  background-color: rgb(38, 85, 97);
-  height: 7vh;
-  width: 80%;
+	background-color: rgb(55, 114, 129);
+	height: 7vh;
+	width: 80%;
 
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-around;
-  border: 3px solid #333333;
-  opacity: 0.95;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-around;
+	border: 3px solid #333333;
+	opacity: 0.95;
 }
 .temp-button div {
-  width: 50%;
-  font-family: monospace;
-  font-weight: 600;
+	width: 50%;
+	font-family: monospace;
+	font-weight: 600;
 }
 
 .graph-container {
-  width: 90vw;
-  height: calc(100vh - (2 * (5vh + max(6vh, 65px))));
-  /* background-color: orange; */
-  white-space: nowrap;
+	width: 90vw;
+	height: calc(100vh - (2 * (5vh + max(6vh, 65px))));
+	/* background-color: orange; */
+	white-space: nowrap;
 }
 
 .buttons {
-  width: 25%;
-  border-radius: 5px;
-  margin: 0px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-user-select: none;
-  user-select: none;
-  font-size: 28px;
-  font: monospace;
+	width: 25%;
+	border-radius: 5px;
+	margin: 0px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	-webkit-user-select: none;
+	user-select: none;
+	font-size: 28px;
+	font-family: oswaldregular;
 }
 
 .active {
-  background-color: lightblue;
+	background-color: lightblue;
 }
 
 .menu-stripe {
-  width: 60%;
-  height: max(0.75vh, 6px);
-  background-color: white;
-  border-radius: 1000px;
+	width: 60%;
+	height: max(0.75vh, 6px);
+	background-color: white;
+	border-radius: 1000px;
 }
 
 .secondContainer {
-  height: calc(100vh - max(6vh, 65px));
-  width: 100vw;
-  background-color: #b3cde0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0, -0.5vh, 2vh #333;
+	height: calc(100vh - max(6vh, 65px));
+	width: 100vw;
+	background-color: #b3cde0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0, -0.5vh, 2vh #333;
 }

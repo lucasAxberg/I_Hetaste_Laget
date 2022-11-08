@@ -90,11 +90,11 @@ let humList = [
 	null,
 ];
 // Skapar 2 listor med 24 platser som sedan kommer att bytas ut till den timmens medeltemperatur
+
 let noZeroTemp = tempList;
 let noZeroHum = humList;
 
 function TempButtonFunction(obj) {
-	// alert(obj.id);
 	console.log(obj.id);
 
 	const parent = obj.parentElement;
@@ -109,11 +109,10 @@ function TempButtonFunction(obj) {
 		}
 	}
 	obj.classList.add("active");
+	// tar bort klassen active från den knapp som har den, och lägger till det på den knapp som blev klickad
 	Convertion(obj);
 	console.log(currentTemp);
 }
-
-// let TemperatureFarenheight = Math.round(weather.TemperatureCelcius * 1.8 + 32);
 
 function toggleArd(obj) {
 	console.log(obj.id);
@@ -144,7 +143,7 @@ function toggleArd(obj) {
 			displayedArduino = 2;
 			break;
 		case "4":
-			displayedArduino = 3;
+			displayedArduino = 4;
 			break;
 	}
 
@@ -158,21 +157,15 @@ function Convertion(obj) {
 	if (obj.id == "F") {
 		let farenheitTemp = Math.round((currentTemp * 1.8 + 32) * 10) / 10;
 		temperature.innerHTML = `${farenheitTemp}°F`;
-		// for (let i = 0; i < tempList.length; i++) {
-		// 	if (tempList[i]) {
-		// 		tempList[i] = Math.round((tempList[i] * 1.8 + 32) * 10) / 10;
-		// 	}
-		// }
 		myChart.update();
-		// Converts the temp to farenheit from celsius with 1 decimal point
+		// Omvandlar temperaturen i celcius till farenheit med 1 decimal
 	} else if (obj.id == "C") {
 		temperature.innerHTML = `${currentTemp}°C`;
-		// Sets the temp to what it is on the database
+		// Byter tillbaka temperaturen till vad det står på databasen
 	}
 }
 
 function changeActive2(obj) {
-	// alert(obj.id);
 	console.log(obj.id);
 
 	const parent = obj.parentElement;
