@@ -272,3 +272,18 @@ const myChart = new Chart(ctx, {
 		},
 	},
 });
+
+function dateTime() { 
+	let date = new Date(); 
+
+ console.log("hej") 
+  let month =  date.getMonth() + 1; 
+  let day = date.getDate() 
+  let hour = date.getHours() 
+  let minute = date.getMinutes() 
+
+  console.log(document.getElementById("time").innerHTML); 
+
+  document.getElementById("time").innerHTML = day + "/" + month + "     "+ "KL" + hour + ":"+minute; 
+  } 
+  dateTime(); 
