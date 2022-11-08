@@ -205,7 +205,7 @@ body {
 	align-items: center;
 	-webkit-user-select: none;
 	user-select: none;
-	font-size: 28px;
+	font-size: min(5vh, 8vw);
 	font-family: oswaldregular;
 }
 
