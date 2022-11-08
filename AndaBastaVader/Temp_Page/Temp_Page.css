@@ -11,9 +11,14 @@
 body {
 	margin: 0;
 	display: flex;
-	background-color: rgb(5, 210, 246);
 	flex-direction: column;
 	overflow-x: hidden;
+	background-image: url(../Images/omg/P5.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: fixed;
+	background-attachment: fixed;
+	overflow-y: hidden;
 }
 
 .navbar {
@@ -110,19 +115,22 @@ body {
 
 .container {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: space-around;
-	align-items: center;
+	align-items: start;
 	margin-top: max(6vh, 65px);
-	height: 100vh;
+	height: calc(83vh - max(6vh, 65px));
 	width: 100vw;
-	padding-bottom: max(6vh, 65px);
+	/* padding-bottom: max(6vh, 65px); */
+}
 
-	background-image: url(../Images/omg/P5.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: fixed;
-	background-attachment: fixed;
+#top-container {
+	height: 17vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: calc(max(6vh, 65px) + 3vh);
 }
 
 .selectA {
@@ -137,7 +145,7 @@ body {
 .display-container {
 	width: 25vw;
 	height: 60%;
-	/* background-color: red; */
+	margin-top: 5vh;
 }
 .display {
 	background-color: white;
@@ -151,8 +159,6 @@ body {
 	flex-direction: column;
 	font-family: oswaldregular;
 	font-weight: 600;
-	/* background-color: orange; */
-	margin-top: -5vh;
 }
 
 #temp {
@@ -166,7 +172,6 @@ body {
 
 .temp-button-container {
 	height: 14vh;
-	/* background-color: black; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -189,9 +194,8 @@ body {
 }
 
 .graph-container {
-	width: 90vw;
-	height: calc(100vh - (2 * (5vh + max(6vh, 65px))));
-	/* background-color: orange; */
+	width: 60vw;
+	height: calc(60vh - max(6vh, 65px));
 	white-space: nowrap;
 }
 
