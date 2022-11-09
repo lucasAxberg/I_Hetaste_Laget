@@ -14,7 +14,14 @@ body {
 	background-color: rgb(5, 210, 246);
 	flex-direction: column;
 	overflow-x: hidden;
+
+	background-image: url(../Images/omg/P5.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: fixed;
+	background-attachment: fixed;
 }
+
 
 .navbar {
 	display: flex;
@@ -117,12 +124,6 @@ body {
 	height: 100vh;
 	width: 100vw;
 	padding-bottom: max(6vh, 65px);
-
-	background-image: url(../Images/omg/P5.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: fixed;
-	background-attachment: fixed;
 }
 
 .selectA {
@@ -205,7 +206,7 @@ body {
 	align-items: center;
 	-webkit-user-select: none;
 	user-select: none;
-	font-size: min(5vh, 2vw);
+	font-size: min(5vh, 8vw);
 	font-family: oswaldregular;
 }
 
@@ -230,18 +231,21 @@ body {
 	box-shadow: 0, -0.5vh, 2vh #333;
 }
 
-#timeBox {
+#timeBox { 
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-radius: 20px;
-	background-color: #6497b177;
-	padding: 1vw;
-}
+    border-radius: 20px; 
+    background-color: #6497b177; 
+    padding: 1vw; 
 
-#time {
-	font-family: oswaldregular;
-	font-size: min(5vh, 5vw);
-	color: white;
-	letter-spacing: 4px;
-}
+} 
+
+#time { 
+	
+    font-family: oswaldregular; 
+    font-size: min(5vh, 5vw); 
+    color: white; 
+    letter-spacing: 4px; 
+
+} 

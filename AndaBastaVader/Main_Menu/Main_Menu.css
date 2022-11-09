@@ -172,7 +172,7 @@ div {
 	height: calc(100vh - max(6vh, 65px));
 	width: 100%;
 	padding-top: max(6vh, 65px);
-
+	
 }
 
 #left-container {
