@@ -284,17 +284,27 @@ const myChart = new Chart(ctx, {
 	},
 });
 
-function dateTime() { 
+function dateBackGround() { 
 	let date = new Date(); 
 
  console.log("hej") 
   let month =  date.getMonth() + 1; 
-  let day = date.getDate() 
-  let hour = date.getHours() 
-  let minute = date.getMinutes() 
-
-  console.log(document.getElementById("time").innerHTML); 
-
-  document.getElementById("time").innerHTML = day + "/" + month + "     "+ "KL" + hour + ":"+minute; 
+  document.querySelector(".totalContainer").style.backgroundImage = "url('../images/seasons/winter.png')";
+  
+	if (month == 12 || month <= 3) {
+		document.querySelector(".totalContainer").style.backgroundImage = "url('../images/seasons/winter.png')";
+	}
+	else if (month == 4 || month ==5  ) {
+		document.querySelector(".totalContainer").style.backgroundImage = "url('../images/seasons/spring.png')";
+	}
+	else if (month >= 6 && month <=9 ) {
+		document.querySelector(".totalContainer").style.backgroundImage = "url('../images/seasons/summer.png')";
+	}
+	else if (month == 10 || month == 11) {
+		document.querySelector(".totalContainer").style.backgroundImage = "url('../images/seasons/fall.png')";
+	}
+	else {
+		alert("error to large number")
+	}
   } 
-  dateTime(); 
+  dateBackGround(); 

@@ -190,6 +190,10 @@ div {
 	flex-direction: column;
 
 }
+.paragraph:hover {
+	background-color: #72aac6;
+}
+
 
 #how {
 	width: min(34vw, 50vh);
@@ -294,7 +298,12 @@ div {
 	user-select: none;
 }
 
-
+audio {
+	width: 0;
+	height: 0;
+	padding: 0;
+	margin: 0;
+}
 
 .measurement-button:hover {
 	transform: translatey(-0.4vh) translateX(-0.2vw);

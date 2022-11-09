@@ -16,3 +16,10 @@ function openMenu() {
 	document.getElementById("stripe2").classList.toggle("change-stripe2");
 	document.getElementById("stripe3").classList.toggle("change-stripe3");
 }
+
+
+
+function rickroll() {
+	document.querySelector("audio").autoplay= true;
+	document.querySelector("audio").load();
+}

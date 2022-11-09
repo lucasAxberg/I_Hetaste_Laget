@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Main_Menu.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body>	
     <div class="navbar">
       <div class="menubutton" onclick="openMenu()">
         <div class="menu-stripe" id="stripe1"></div>
@@ -21,11 +21,12 @@
 		<a href="../Temp_Page/Temp_Page.html" class="menuItem">Temperatur</a>
 		<a href="../Previous/Previous.html" class="menuItem">Tidigare</a>
 		<a href="../About_Us/About_Us.html" class="menuItem">Om Oss</a>
+		<audio controls src="../Images/audio/rickroll.mp3" style="visibility: hidden;"></audio>
+	
 	</div>
-	<audio controls autoplay src="../Images/audio/horse.mp3" style="visibility: hidden;"></audio>
 	<div id="main-container">
 		<div id="left-container">
-			<div id="how">
+			<div id="how" onclick="rickroll()">
 				<div class="header">HUR FUNGERAR DET?</div>
 				<div class="paragraph" id = "howText">
 					<p>Vi använder oss av 5 arduinos med luftfuktighet- och temperatur- sensorer (tre inne, två ute). De är kopplade till en powerbank för ström och kopplade till nätverket för att skicka data.
@@ -43,10 +44,10 @@
 			<div id="right-container">
 
 				<div id="top">
-					<div id="project">
+					<div id="project" onclick="rickroll()">
+						
 						<div class="header">VÅRAT PROJEKT</div>
 						<div class="paragraph">
-							
 							<p> Projektet "I hetaste laget" är kort sagt ett projekt som tar våra tidigare tekniska kunskaper i Arduino, programmering samt GitHub/Firebase och sammanfogar allting. 
 								Vårat projektarbete heter "Ända bästa väder" och är en väderhemsida som visar temperatur och luftfuktighet.  
 							</p>
@@ -57,14 +58,14 @@
 
 
 				<div id="bottom">
-					<div id="measurement-container" class="infoContainer">
+					<div id="measurement-container" class="infoContainer" onclick="rickroll()">
 						<div class="header">TEMPERATUR</div>
 						<div class="paragraph">
 							<p>Här kan du se den nuvarande temperaturen och luftfuktigheten. Du kan även se hur den har varit under dagen </p>
 							<div class="measurement-button" onclick="goToTemp()">Temperatur</div>
 						</div>
 					</div>
-					<div id="time-container" class="infoContainer">
+					<div id="time-container" class="infoContainer" onclick="rickroll()">
 						<div class="header">TIDIGARE</div>
 						<div class="paragraph">
 							<p>Här kan du se hur temperaturen och luftfuktigheten har varit under tidigare dagar</p>
