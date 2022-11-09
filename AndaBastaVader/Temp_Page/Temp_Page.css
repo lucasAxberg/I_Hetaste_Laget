@@ -209,7 +209,7 @@ body {
 	align-items: center;
 	-webkit-user-select: none;
 	user-select: none;
-	font-size: min(5vh, 8vw);
+	font-size: min(5vh, 2vw);
 	font-family: oswaldregular;
 }
 
