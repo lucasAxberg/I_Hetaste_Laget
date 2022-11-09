@@ -247,5 +247,7 @@ body {
     font-size: min(5vh, 5vw); 
     color: white; 
     letter-spacing: 4px; 
+	color: black;
+	font-weight: 900;
 
 } 
