@@ -115,6 +115,7 @@ body {
 	height: calc(90vh - max(6vh, 65px));
 	margin-top: max(6vh, 65px);
 	align-items: center;
+	
 }
 
 #left-container {
