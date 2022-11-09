@@ -124,6 +124,8 @@ body {
 	height: 100vh;
 	width: 100vw;
 	padding-bottom: max(6vh, 65px);
+	background-image: url("../Images/seasons/summer.png");
+	background-size: cover;
 }
 
 .selectA {

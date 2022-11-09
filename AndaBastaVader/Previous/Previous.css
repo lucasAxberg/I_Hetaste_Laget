@@ -115,7 +115,13 @@ body {
 	height: calc(90vh - max(6vh, 65px));
 	margin-top: max(6vh, 65px);
 	align-items: center;
-	
+
+}
+
+.container {
+	background-image: url("../Images/seasons/summer.png");
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 #left-container {
