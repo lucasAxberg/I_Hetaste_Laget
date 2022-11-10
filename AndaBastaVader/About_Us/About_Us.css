@@ -211,12 +211,13 @@ body {
 
 .profilePic {
 	display: flex;
+
 	margin: 10px;
 	border-radius: 20px;
 	display: flex;
 	height: 300px;
 	background-size: cover;
-	background-image: url("https://media.istockphoto.com/id/1368965646/photo/multi-ethnic-guys-and-girls-taking-selfie-outdoors-with-backlight-happy-life-style-friendship.jpg?b=1&s=170667a&w=0&k=20&c=oFtP564Ykvak2VIyM1OUb29daY5S4uqsmT3j3_8QgfQ=");
+	background-image: url("../Images/istockphoto-1209654046-612x612.jpg");
 }
 
 
