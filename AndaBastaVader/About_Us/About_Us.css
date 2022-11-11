@@ -128,7 +128,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 	box-shadow: 5px 5px 2px rgb(66, 89, 97);
-	height: 325%;
+	height: fit-content;
 }
 
 .content {
