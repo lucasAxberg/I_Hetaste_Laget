@@ -115,7 +115,6 @@ body {
 	height: calc(90vh - max(6vh, 65px));
 	margin-top: max(6vh, 65px);
 	align-items: center;
-
 }
 
 .container {
@@ -127,7 +126,6 @@ body {
 #left-container {
 	height: 90%;
 	width: 25vw;
-	/* background-color: #333; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -169,7 +167,6 @@ body {
 	height: 5vh;
 	width: 100%;
 	padding-bottom: 5vh;
-	/* background-color: red; */
 	display: flex;
 	justify-content: center;
 }
@@ -185,7 +182,6 @@ body {
 
 .buttons {
 	display: flex;
-	/* background-color: blue; */
 	width: 25%;
 	justify-content: center;
 	align-items: center;

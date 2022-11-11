@@ -355,6 +355,7 @@ function toggleActive(obj) {
 			});
 		}
 	}
+	// Om den dagen som är vald inte finns på den arduinon som man väljer så byter den till den närmaste dagen
 
 	switch (id) {
 		case "11":
@@ -399,28 +400,26 @@ function toggleActiveDay(obj) {
 	}
 	obj.classList.add("activeDay");
 }
-//
 
-// funktion som ändrar backrund beroende på vilken årstid det är
-function dateBackGround() { 
-	let date = new Date(); 
+function dateBackGround() {
+	let date = new Date();
 
- console.log("hej") 
-  let month =  date.getMonth() + 1; 
-
+	console.log("hej");
+	let month = date.getMonth() + 1;
 
 	if (month == 12 || month <= 3) {
-		document.querySelector(".container").style.backgroundImage = "url('../images/seasons/winter.png')";
+		document.querySelector(".container").style.backgroundImage =
+			"url('../images/seasons/winter.png')";
+	} else if (month == 4 || month == 5) {
+		document.querySelector(".container").style.backgroundImage =
+			"url('../images/seasons/spring.png')";
+	} else if (month >= 6 && month <= 9) {
+		document.querySelector(".container").style.backgroundImage =
+			"url('../images/seasons/summer.png')";
+	} else if (month == 10 || month == 11) {
+		document.querySelector(".container").style.backgroundImage =
+			"url('../images/seasons/fall.png')";
 	}
-	else if (month == 4 || month ==5  ) {
-		document.querySelector(".container").style.backgroundImage = "url('../images/seasons/spring.png')";
-	}
-	else if (month >= 6 && month <=9 ) {
-		document.querySelector(".container").style.backgroundImage = "url('../images/seasons/summer.png')";
-	}
-	else if (month == 10 || month == 11) {
-    document.querySelector(".container").style.backgroundImage = "url('../images/seasons/fall.png')";
-	}
-  } 
-  dateBackGround(); 
-
+}
+dateBackGround();
+// funktion som ändrar bakgrund beroende på vilken årstid det är

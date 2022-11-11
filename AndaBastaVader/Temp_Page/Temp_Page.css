@@ -121,15 +121,11 @@ body {
 	margin-top: max(6vh, 65px);
 	height: calc(83vh - max(6vh, 65px));
 	width: 100vw;
-
-	/* paddin
-	
-	g-bottom: max(6vh, 65px); */
 }
 
 .totalContainer {
 	background-image: url("../Images/seasons/summer.png");
-	background-size: cover;	
+	background-size: cover;
 }
 
 #top-container {

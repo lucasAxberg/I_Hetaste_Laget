@@ -12,63 +12,62 @@
 		<!-- <script src="graph.js"></script> -->
 	</head>
 	<body>
-	<div class = totalContainer>
-		<div class="navbar">
-			<div class="menubutton" onclick="openMenu()">
-				<div class="menu-stripe" id="stripe1"></div>
-				<div class="menu-stripe" id="stripe2"></div>
-				<div class="menu-stripe" id="stripe3"></div>
+		<div class="totalContainer">
+			<div class="navbar">
+				<div class="menubutton" onclick="openMenu()">
+					<div class="menu-stripe" id="stripe1"></div>
+					<div class="menu-stripe" id="stripe2"></div>
+					<div class="menu-stripe" id="stripe3"></div>
+				</div>
+				<div class="title-container">
+					<div class="title">Temperatur</div>
+				</div>
 			</div>
-			<div class="title-container">
-				<div class="title">Temperatur</div>
+			<div class="toTheSide" id="sideMenu">
+				<a href="../Main_Menu/Main_Menu.html" class="menuItem">Hem</a>
+				<a href="../Temp_Page/Temp_Page.html" class="menuItem">Temperatur</a>
+				<a href="../Previous/Previous.html" class="menuItem">Tidigare</a>
+				<a href="../About_Us/About_Us.html" class="menuItem">Om Oss</a>
 			</div>
-		</div>
-		<div class="toTheSide" id="sideMenu">
-			<a href="../Main_Menu/Main_Menu.html" class="menuItem">Hem</a>
-			<a href="../Temp_Page/Temp_Page.html" class="menuItem">Temperatur</a>
-			<a href="../Previous/Previous.html" class="menuItem">Tidigare</a>
-			<a href="../About_Us/About_Us.html" class="menuItem">Om Oss</a>
-		</div>
 
-		<div id="top-container">
-			<div class="selectA">
-				<div id="1" class="buttons active" onclick="toggleArd(this)">
-					Klassrummet
+			<div id="top-container">
+				<div class="selectA">
+					<div id="1" class="buttons active" onclick="toggleArd(this)">
+						Klassrummet
+					</div>
+					<div id="2" class="buttons" onclick="toggleArd(this)">Terrariet</div>
+					<div id="3" class="buttons" onclick="toggleArd(this)">
+						Vardagsrummet
+					</div>
+					<div id="4" class="buttons" onclick="toggleArd(this)">Utomhus</div>
 				</div>
-				<div id="2" class="buttons" onclick="toggleArd(this)">Terrariet</div>
-				<div id="3" class="buttons" onclick="toggleArd(this)">
-					Vardagsrummet
-				</div>
-				<div id="4" class="buttons" onclick="toggleArd(this)">Utomhus</div>
 			</div>
-		</div>
-		<div class="container" id="container">
-			<div class="display-container">
-				<div class="display">
-					<div id="temp">23</div>
-					<div id="humidity">42%</div>
-				</div>
-				<div class="temp-button-container">
-					<div class="temp-button">
-						<div
-							id="C"
-							class="buttons active"
-							onclick="TempButtonFunction(this)"
-						>
-							C
-						</div>
-						<div id="F" class="buttons" onclick="TempButtonFunction(this)">
-							F
+			<div class="container" id="container">
+				<div class="display-container">
+					<div class="display">
+						<div id="temp">23</div>
+						<div id="humidity">42%</div>
+					</div>
+					<div class="temp-button-container">
+						<div class="temp-button">
+							<div
+								id="C"
+								class="buttons active"
+								onclick="TempButtonFunction(this)"
+							>
+								C
+							</div>
+							<div id="F" class="buttons" onclick="TempButtonFunction(this)">
+								F
+							</div>
 						</div>
 					</div>
 				</div>
-				<!-- <div id="timeBox"><div id="time">rhu ruih rfuh hejsan</div></div> -->
-			</div>
-			<div class="graph-container">
-				<canvas id="graph"></canvas>
+				<div class="graph-container">
+					<canvas id="graph"></canvas>
+				</div>
 			</div>
 		</div>
-	</div>
 
 		<script src="firebase.js"></script>
 		<script src="script.js"></script>

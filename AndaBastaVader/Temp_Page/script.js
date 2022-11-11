@@ -1,42 +1,3 @@
-// let weather = {
-// 	state: "rain",
-// 	TemperatureCelcius: 18,
-// 	humidity: 0,
-// 	time: 0,
-// 	timestate: "noon",
-// 	season: "winter",
-// };
-
-// let backgroundImages = {
-// 	normal: ["p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8"],
-// 	sunSetRise: ["sunrise1", "sunrise2", "sunrise3", "sunrise4"],
-// 	night: ["night1", "night2", "night3"],
-// 	rain: ["rain1", "rain2", "rain3"],
-// 	Thunder: ["Thunder1"],
-// };
-
-// console.log(backgroundImages);
-
-// function changebackgroundImage() {
-// 	let backgroundImageUrl = { start: "../images/omg/", ending: ".jpg" };
-// 	let random;
-// 	let ImmageUrl;
-// 	if (weather.state == "rain") {
-// 		random = Math.floor(Math.random() * 1);
-
-// 		ImageuUrl = backgroundImageUrl.start.concat(
-// 			backgroundImages.rain[random],
-// 			backgroundImageUrl.ending
-// 		);
-// 		console.log(ImageuUrl);
-
-// 		document.getElementById("container").style.backgroundImage =
-// 			'url("../images/omg/p5.jpg")';
-// 	}
-// 	return;
-// }
-
-// changebackgroundImage();
 let tempList = [
 	null,
 	null,
@@ -127,8 +88,8 @@ function toggleArd(obj) {
 	for (let i = 0; i < humList.length; i++) {
 		humList[i] = null;
 	}
-
 	myChart.update();
+	// Rensar listorna och tömmer grafen
 
 	const parent = obj.parentElement;
 	console.log(parent);
@@ -142,6 +103,8 @@ function toggleArd(obj) {
 		}
 	}
 	obj.classList.add("active");
+	// Tar bort klassen active från den knapp som har den och lägger till den på den som blev clickad på
+
 	let id = obj.id;
 	console.log(id);
 
@@ -159,6 +122,7 @@ function toggleArd(obj) {
 			displayedArduino = 4;
 			break;
 	}
+	// Väljer vilken arduino som datan ska läsas in från
 
 	firebase.database().ref("updater").set({
 		val: displayedArduino,
@@ -201,8 +165,6 @@ function openMenu() {
 	document.getElementById("stripe2").classList.toggle("change-stripe2");
 	document.getElementById("stripe3").classList.toggle("change-stripe3");
 }
-
-let maxY = 100;
 
 const ctx = document.getElementById("graph").getContext("2d");
 const myChart = new Chart(ctx, {
@@ -285,11 +247,11 @@ const myChart = new Chart(ctx, {
 		},
 	},
 });
+// Skapar grafen
 
 function dateBackGround() {
 	let date = new Date();
 
-	console.log("hej");
 	let month = date.getMonth() + 1;
 	document.querySelector(".totalContainer").style.backgroundImage =
 		"url('../images/seasons/winter.png')";

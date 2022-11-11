@@ -11,7 +11,6 @@
 body {
 	margin: 0;
 	display: flex;
-
 	flex-direction: column;
 	background-image: url("../Images/omg/P4.jpg");
 	height: 100%;
@@ -29,7 +28,6 @@ body {
 	position: fixed;
 	justify-content: start;
 	z-index: 2;
-	
 }
 
 .menubutton {
@@ -119,7 +117,6 @@ body {
 	width: 100%;
 	height: 100vh;
 	justify-content: center;
-
 }
 
 .contentbox {
@@ -131,8 +128,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 	box-shadow: 5px 5px 2px rgb(66, 89, 97);
-	height: 1000%;
-	
+	height: 325%;
 }
 
 .content {
@@ -147,9 +143,7 @@ body {
 	color: white;
 	line-height: 1.8;
 	letter-spacing: 0.8px;
-	
 }
-
 
 .heading {
 	display: flex;
@@ -162,6 +156,7 @@ body {
 	font-size: 3.4em;
 	background-color: rgba(0, 0, 0, 0.171);
 	border-radius: 50px;
+	margin-top: 10vh;
 }
 
 .contentHeding {
@@ -172,7 +167,6 @@ body {
 
 .personalBox {
 	background-color: rgba(72, 165, 129, 0.8);
-
 	margin: 20px;
 	border-radius: 30px;
 	padding: 20px;
@@ -195,18 +189,16 @@ body {
 }
 
 .personalBox:hover {
-	background-color: rgb(68, 157, 141)
+	background-color: rgb(68, 157, 141);
 }
 
 .groupPicture {
 	margin-top: 50px;
-	background-image: url("https://media.istockphoto.com/id/1368965646/photo/multi-ethnic-guys-and-girls-taking-selfie-outdoors-with-backlight-happy-life-style-friendship.jpg?b=1&s=170667a&w=0&k=20&c=oFtP564Ykvak2VIyM1OUb29daY5S4uqsmT3j3_8QgfQ=");
 	width: 90%;
 	height: 100vh;
 	background-repeat: no-repeat;
 	border-radius: 40px;
 	background-size: cover;
-
 }
 
 .profilePic {
@@ -216,29 +208,4 @@ body {
 	display: flex;
 	height: 300px;
 	background-size: cover;
-	background-image: url("https://media.istockphoto.com/id/1368965646/photo/multi-ethnic-guys-and-girls-taking-selfie-outdoors-with-backlight-happy-life-style-friendship.jpg?b=1&s=170667a&w=0&k=20&c=oFtP564Ykvak2VIyM1OUb29daY5S4uqsmT3j3_8QgfQ=");
 }
-
-
-#sebpic {
-	background-image: url("https://media.istockphoto.com/id/1368965646/photo/multi-ethnic-guys-and-girls-taking-selfie-outdoors-with-backlight-happy-life-style-friendship.jpg?b=1&s=170667a&w=0&k=20&c=oFtP564Ykvak2VIyM1OUb29daY5S4uqsmT3j3_8QgfQ=");
-}
-
-#lucepic {
-	background-image: url("https://media.istockphoto.com/id/1368965646/photo/multi-ethnic-guys-and-girls-taking-selfie-outdoors-with-backlight-happy-life-style-friendship.jpg?b=1&s=170667a&w=0&k=20&c=oFtP564Ykvak2VIyM1OUb29daY5S4uqsmT3j3_8QgfQ=");
-}
-
-#willpic {
-	background-image: url("https://media.istockphoto.com/id/1368965646/photo/multi-ethnic-guys-and-girls-taking-selfie-outdoors-with-backlight-happy-life-style-friendship.jpg?b=1&s=170667a&w=0&k=20&c=oFtP564Ykvak2VIyM1OUb29daY5S4uqsmT3j3_8QgfQ=");
-}
-
-#fellpic {
-	background-image: url("https://media.istockphoto.com/id/1368965646/photo/multi-ethnic-guys-and-girls-taking-selfie-outdoors-with-backlight-happy-life-style-friendship.jpg?b=1&s=170667a&w=0&k=20&c=oFtP564Ykvak2VIyM1OUb29daY5S4uqsmT3j3_8QgfQ=");
-}
-
-#lovpic {
-	background-image: url("https://media.istockphoto.com/id/1368965646/photo/multi-ethnic-guys-and-girls-taking-selfie-outdoors-with-backlight-happy-life-style-friendship.jpg?b=1&s=170667a&w=0&k=20&c=oFtP564Ykvak2VIyM1OUb29daY5S4uqsmT3j3_8QgfQ=");
-}
-
-
-

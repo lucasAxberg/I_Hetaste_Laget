@@ -8,8 +8,6 @@
 	font-style: normal;
 }
 
-
-
 body {
 	padding: 0px;
 	margin: 0px;
@@ -17,7 +15,6 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: fixed;
-
 }
 
 div {
@@ -131,10 +128,8 @@ div {
 
 .header {
 	width: 100%;
-	color: #000000; 
-	/* background-color: #6497b15a; */
+	color: #000000;
 	text-shadow: 2px 2px 2px rgb(91, 121, 126);
-	/* background-color: #333; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -145,11 +140,8 @@ div {
 
 .paragraph {
 	font-family: oswaldregular;
-
 	font-size: min(22px, 2.8vw, 3vh);
-	
 	padding: 0.5em;
-
 	color: #def2f1;
 	background-color: #6497b1;
 	height: calc(100% - 5vh - 1em);
@@ -162,17 +154,13 @@ div {
 	text-shadow: 2px 2px 2px #505050;
 }
 
-
-
-
 #main-container {
-	display: flex;	
+	display: flex;
 	background-size: cover;
 	justify-content: space-around;
 	height: calc(100vh - max(6vh, 65px));
 	width: 100%;
 	padding-top: max(6vh, 65px);
-	
 }
 
 #left-container {
@@ -180,7 +168,6 @@ div {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* background-color: blue; */
 	padding-bottom: 6vh;
 	padding-left: 4vw;
 }
@@ -188,24 +175,16 @@ div {
 #project {
 	display: flex;
 	flex-direction: column;
-
 }
-.paragraph:hover {
-	background-color: #72aac6;
-}
-
 
 #how {
 	width: min(34vw, 50vh);
 	margin-bottom: 2vh;
-	/* background-color: #2b7a78; */
 }
 
 #about {
-	height: min(34vw,34vh);
+	height: min(34vw, 34vh);
 	width: min(34vw, 34vh);
-
-	/* background-color: #2b7a78; */
 	border-radius: 1000px;
 	display: flex;
 	flex-direction: column;
@@ -222,7 +201,6 @@ div {
 #about-shadow {
 	background-color: #222;
 	border-radius: 1000px;
-	/* opacity: 0.2; */
 	box-shadow: 0.25vh 0.25vh 2vh #333, -0.25vh -0.25vh 2vh #6497b178;
 }
 
@@ -245,22 +223,18 @@ div {
 }
 
 #right-container {
-
 	width: 50%;
 	display: row;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
 	/* background-color: blue; */
-	
 }
 
 #top {
 	width: 90%;
 	margin-top: 1vh;
-	/* background-color: yellow; */
 	margin-right: 10%;
-	
 }
 
 #bottom {
@@ -268,9 +242,6 @@ div {
 	justify-content: space-between;
 	width: 90%;
 	margin-right: 10%;
-
-
-	/*background-color: darkgrey; */ 
 }
 
 .infoContainer {
@@ -278,7 +249,6 @@ div {
 	margin-top: 15px;
 	margin: 1vw;
 	width: min(40%);
-	/* background-color: #2b7a78; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -309,5 +279,3 @@ audio {
 	transform: translatey(-0.4vh) translateX(-0.2vw);
 	box-shadow: 0.2vw 0.4vh #222;
 }
-
-
